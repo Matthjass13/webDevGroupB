@@ -76,7 +76,12 @@ h2 + p {
 }
 
 .mockupGallery > img {
-    max-width:300px;
+    max-width:200px;
+    height: auto;
+    object-fit: cover;
+}
+.mockupGallery_how > img {
+    max-width:400px;
     height: auto;
     object-fit: cover;
 }
