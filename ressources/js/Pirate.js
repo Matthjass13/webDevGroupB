@@ -15,7 +15,7 @@ export class Pirate {
         this.runningRightSprites = [];
         this.runningLeftSprites = [];
         this.ready = false;
-        this.SPRITES_FOLDER_PATH = `ressources/images/game/character/`;
+        this.SPRITES_FOLDER_PATH = `ressources/images/game/level/characters/player/0/`;
 
         this.idleSpriteIndex = 0;
         this.idleSpriteTimer = 0;
@@ -33,22 +33,22 @@ export class Pirate {
     loadSprites() {
         for (let i = 0; i < 2; i++) {
             this.idleRightSprites[i] = new Image();
-            this.idleRightSprites[i].src = this.SPRITES_FOLDER_PATH + `pirateIdleRight${i}.png`;
+            this.idleRightSprites[i].src = this.SPRITES_FOLDER_PATH + `idle/right/${i}.png`;
           
         }
         for (let i = 0; i < 2; i++) {
             this.idleLeftSprites[i] = new Image();
-            this.idleLeftSprites[i].src = this.SPRITES_FOLDER_PATH + `pirateIdleLeft${i}.png`;
+            this.idleLeftSprites[i].src = this.SPRITES_FOLDER_PATH + `idle/left/${i}.png`;
            
         }
         for (let i = 0; i < 4; i++) {
             this.runningRightSprites[i] = new Image();
-            this.runningRightSprites[i].src = this.SPRITES_FOLDER_PATH + `pirateRunningRight${i}.png`;
+            this.runningRightSprites[i].src = this.SPRITES_FOLDER_PATH + `running/right/${i}.png`;
           
         }
         for (let i = 0; i < 4; i++) {
             this.runningLeftSprites[i] = new Image();
-            this.runningLeftSprites[i].src = this.SPRITES_FOLDER_PATH + `pirateRunningLeft${i}.png`;
+            this.runningLeftSprites[i].src = this.SPRITES_FOLDER_PATH + `running/left/${i}.png`;
         }
         this.ready=true;
     }

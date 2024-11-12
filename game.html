@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="ressources/css/style.css">
     <link rel="stylesheet" href="ressources/css/mobileStyle.css">
-    <script type="module" src="ressources/js/Level.js"></script>
+    <!--<link rel="stylesheet" href="ressources/css/gameStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">-->
+
 </head>
 <body>
 
@@ -16,7 +18,7 @@
 
         <ul>
             <li class="hamburger">
-                <img src="ressources/images/hamburger_icon.svg">
+                <img src="ressources/images/website/hamburger_icon.svg">
             </li>
             <li>
                 <a href="description.html">Description</a>
@@ -46,17 +48,14 @@
         <article>
             <header>
                 <h2>Play our game !</h2>
-                <canvas id="canvas" width="800" height="500"></canvas>
+
+                <canvas id="gameCanvas" width="800" height="500"></canvas> 
+                <script type="module" src="ressources/js/script.js"></script>
+
                 <p>By Matthias Gaillard the 02/11/2024 at 13:00</p>
             </header>
 
-            <!--<canvas id="gameCanvas" width="800" height="500"
-            style="background-color: lightblue;"></canvas>-->
-
-            <canvas id="gameCanvas" width="800" height="500"></canvas>
-
-          
-
+  
           
         </article>
     </section>
@@ -65,9 +64,9 @@
 </main>
     
     <footer>
-        <img id="logo" src="ressources/images/logo.png">
+        <img id="logo" src="ressources/images/website/logo.png">
     </footer>
+    
 
-    <script src="ressources/js/script.js"></script>
 </body>
 </html>

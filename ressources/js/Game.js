@@ -1,61 +1,52 @@
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext('2d');
+// Game.js
+import { TitleScreen } from './TitleScreen.js';
+import { RulesScreen } from './RulesScreen.js';
+import { Level } from './Level.js';
 
-level = new Level(canvas, ctx);
+export class Game {
+    constructor(ctx) {
+        this.ctx = ctx;
+        this.titleScreen = new TitleScreen(ctx, () => this.startGame(), () => this.showRules(), () => this.showDescription());
+        this.rulesScreen = new RulesScreen(ctx, () => this.showTitleScreen());
+        this.level = new Level(ctx);
+        this.currentScreen = this.titleScreen;
 
-// Handle keyboard controls
-keysDown = {};
-addEventListener("keydown", function (e) {
-    keysDown[e.keyCode] = true;
-}, false);
-addEventListener("keyup", function (e) {
-    delete keysDown[e.keyCode];
-}, false);
-
-let w = window;
-requestAnimationFrame = w.requestAnimationFrame || w.webkitRequestAnimationFrame || w.msRequestAnimationFrame || w.mozRequestAnimationFrame;
-
-var then = Date.now();
-main();
-
-
-
-class Level {
-
-    constructor(canvas, ctx) {
-        this.width = canvas.width;
-        this.height = canvas.height
-        this.ctx=ctx;
-        this.bgImage = new Image();
-        this.bgImage.src = "ressources/images/game/background/" + name + ".jpg";
-
-        this.pirate = new Pirate(this.width, this.height);
-
-        
+        this.setupEventListeners();
+        this.showTitleScreen();
     }
 
-    
-    // Update game objects
-    update(modifier) {
-        this.pirate.update(modifier, keysDown);
-    };
+    setupEventListeners() {
+        this.ctx.canvas.addEventListener("mousemove", (e) => {
+            const rect = this.ctx.canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            if (this.currentScreen.handleMouseMove) this.currentScreen.handleMouseMove(x, y);
+        });
 
-    // Render the game
-    render(ctx) {
-        this.ctx.clearRect(0, 0, canvas.width, canvas.height);
-        this.ctx.drawImage(this.bgImage, 0, 0);
-        this.pirate.render(ctx);
-    };
+        this.ctx.canvas.addEventListener("click", (e) => {
+            const rect = this.ctx.canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            if (this.currentScreen.handleClick) this.currentScreen.handleClick(x, y);
+        });
+    }
 
-    main() {
+    showTitleScreen() {
+        this.currentScreen = this.titleScreen;
+        this.currentScreen.draw();
+    }
 
-        let now = Date.now();
-        let delta = now - then;
-        update(delta / 1000);
-        render();
-        then = now;
-        requestAnimationFrame(play);
-    };
+    showRules() {
+        this.currentScreen = this.rulesScreen;
+        this.currentScreen.draw();
+    }
 
+    startGame() {
+        this.currentScreen = this.level;
+        this.currentScreen.main();
+    }
+
+    showDescription() {
+        // Transition vers la page de description
+    }
 }
-
