@@ -1,3 +1,29 @@
+Important remaining tasks :
+- Change background of level and manage collisions in it
+- Implement Ennemy class
+  (ennemy moves in a line will be simpler I think)
+  + the sprites are already in ressources folder, choose the ennemy you prefer !
+  + manage collisions (losing a life when touching)
+- Implement key and door mechanic (door sprites and key image in the ressources folder)
+- Implement Character selection
+    For now, you can test both characters by changing the number argument when instanciating a pirate :
+    new Pirate(x, y, 0) for original pirate and new Pirate(x, y, 1) for the new one.
+    It would be great to have a way for the end user to choose the character without having him to change the code,
+    there are a lot of options for that, how do you think we should do that ?
 
-Gestion de collision avec le décor, les ennemis et le bord du canevas 
-change canvas size
+Less important :
+- Add other items from the ressources folder (bomb, cannons... could be fun though)
+- Create muliple levels
+
+Simple task :
+- Change background image for title screen with one of greater quality ?
+
+Remaining Tasks from the word table document
+- Form with HTML input and validation see optional JS
+- Media & API : canvas AND audio or video e.g.: integrates a tutorial video of the game or application
+- Type of storage (?)
+- Callback (API or own construction)
+- Drag'n Drop (for example building avatar)
+- Ajax optional, game setup
+- JSON (Optional, game setup and JS website)
+- Geolocalisation

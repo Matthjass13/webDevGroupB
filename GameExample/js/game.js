@@ -25,10 +25,6 @@ let hero = {
 	speed: 256 // movement in pixels per second
 };
 
-
-
-
-
 // Handle keyboard controls
 let keysDown = {};
 addEventListener("keydown", function (e) {

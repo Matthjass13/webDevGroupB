@@ -1,52 +1,29 @@
-// Game.js
-import { TitleScreen } from './TitleScreen.js';
-import { RulesScreen } from './RulesScreen.js';
-import { Level } from './Level.js';
+import { Menu } from "./Menu.js";
+import { Level } from "./Level.js";
 
+/**
+ * This class contains the whole game
+ * and is used to switch between menu and level screen
+ * @author Matthias Gaillard
+ */
 export class Game {
     constructor(ctx) {
-        this.ctx = ctx;
-        this.titleScreen = new TitleScreen(ctx, () => this.startGame(), () => this.showRules(), () => this.showDescription());
-        this.rulesScreen = new RulesScreen(ctx, () => this.showTitleScreen());
-        this.level = new Level(ctx);
-        this.currentScreen = this.titleScreen;
-
-        this.setupEventListeners();
-        this.showTitleScreen();
+        this.currentScene = null;
+        this.menu = new Menu(ctx, this);
+        this.level = new Level(ctx, this);
     }
 
-    setupEventListeners() {
-        this.ctx.canvas.addEventListener("mousemove", (e) => {
-            const rect = this.ctx.canvas.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            if (this.currentScreen.handleMouseMove) this.currentScreen.handleMouseMove(x, y);
-        });
+    switchTo(sceneName) {
+        if (this.currentScene && this.currentScene.stop)
+            this.currentScene.stop();
 
-        this.ctx.canvas.addEventListener("click", (e) => {
-            const rect = this.ctx.canvas.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            if (this.currentScreen.handleClick) this.currentScreen.handleClick(x, y);
-        });
+        if (sceneName === "Menu")
+            this.currentScene = this.menu;
+        else if (sceneName === "Level")
+            this.currentScene = this.level;
+
+        if (this.currentScene && this.currentScene.start)
+            this.currentScene.start();
     }
 
-    showTitleScreen() {
-        this.currentScreen = this.titleScreen;
-        this.currentScreen.draw();
-    }
-
-    showRules() {
-        this.currentScreen = this.rulesScreen;
-        this.currentScreen.draw();
-    }
-
-    startGame() {
-        this.currentScreen = this.level;
-        this.currentScreen.main();
-    }
-
-    showDescription() {
-        // Transition vers la page de description
-    }
 }
