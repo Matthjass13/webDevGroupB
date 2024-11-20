@@ -13,7 +13,8 @@ export class Menu {
     this.game = game;
 
     this.backgroundImage = new Image();
-    this.backgroundImage.src = "ressources/images/game/menu/sand.png";
+    this.backgroundImage.src =
+      "ressources/images/game/level/background/backgroundMenu.png";
     this.backgroundImage.onload = () => {
       this.ctx.drawImage(
         this.backgroundImage,
