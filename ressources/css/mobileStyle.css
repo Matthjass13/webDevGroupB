@@ -6,7 +6,7 @@
     }
 
     nav > ul {
-        display:flex;
+        display:flex; /*   test push 1 */
         gap:20px;
         flex-direction:column;
         justify-content:center;
