@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1226690f-e42b-4509-940c-d564306b135e" name="Changes" comment="The base game looks great ! A lot of functionalities are implemented like coins and 2nd character, but there is still a lot to do." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Matthjass13&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="2c211c50-dbae-48dc-8765-783071fc537a" />
+        <option name="url" value="https://github.com/Matthjass13/webDevGroupB.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2okzKtnlHhO90Jhp4A9f0jNVon6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Prêt Maintenant/Desktop/HES/Semestre3/WebDev/PirateWebSite/webDevGroupB/ressources/js&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Prêt Maintenant\Desktop\HES\Semestre3\WebDev\PirateWebSite\webDevGroupB\ressources\js" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="webDevGroupB" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="webDevGroupB" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1226690f-e42b-4509-940c-d564306b135e" name="Changes" comment="" />
+      <created>1731428301151</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731428301151</updated>
+      <workItem from="1731428302201" duration="5588000" />
+      <workItem from="1731479621390" duration="10246000" />
+      <workItem from="1731610534656" duration="7278000" />
+      <workItem from="1731657222533" duration="36135000" />
+      <workItem from="1731830293473" duration="68000" />
+      <workItem from="1731939226350" duration="2686000" />
+      <workItem from="1731957701320" duration="19000" />
+      <workItem from="1732019094540" duration="4247000" />
+      <workItem from="1732111026973" duration="366000" />
+      <workItem from="1732111399625" duration="299000" />
+      <workItem from="1732111709867" duration="63000" />
+    </task>
+    <task id="LOCAL-00001" summary="Extremely ugly and impractical code, but at least the link between the menu and the game works">
+      <option name="closed" value="true" />
+      <created>1731430537986</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731430537986</updated>
+    </task>
+    <task id="LOCAL-00002" summary="The base game looks great ! A lot of functionalities are implemented like coins and 2nd character, but there is still a lot to do.">
+      <option name="closed" value="true" />
+      <created>1731789360828</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731789360828</updated>
+    </task>
+    <task id="LOCAL-00003" summary="The base game looks great ! A lot of functionalities are implemented like coins and 2nd character, but there is still a lot to do.">
+      <option name="closed" value="true" />
+      <created>1731944066854</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731944066854</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Extremely ugly and impractical code, but at least the link between the menu and the game works" />
+    <MESSAGE value="The base game looks great ! A lot of functionalities are implemented like coins and 2nd character, but there is still a lot to do." />
+    <option name="LAST_COMMIT_MESSAGE" value="The base game looks great ! A lot of functionalities are implemented like coins and 2nd character, but there is still a lot to do." />
+  </component>
+</project>
