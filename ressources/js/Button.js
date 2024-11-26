@@ -1,7 +1,8 @@
 /**
  * This class represents a clickable button
  * with an associated action
- * @author Elia Pfammatter, Matthias Gaillard
+ * @author Elia Pfammatter
+ * @contributor Matthias Gaillard
  */
 
 export class Button {
@@ -14,7 +15,10 @@ export class Button {
         this.width = width;
         this.height = height;
         this.hovered = false;
+        this.sound = new Audio("ressources/audio/soundEffects/buttonPressed.wav");
+        this.sound.volume = 0.5;
         this.addCanvasEventListener();
+
     }
 
     draw() {
@@ -57,14 +61,11 @@ export class Button {
     }
 
     addCanvasEventListener() {
-        // Gestion du survol de la souris
         this.ctx.canvas.addEventListener("mousemove", (event) => {
             const rect = this.ctx.canvas.getBoundingClientRect();
             const mouseX = event.clientX - rect.left;
             const mouseY = event.clientY - rect.top;
             const hovered = this.isMouseOver(mouseX, mouseY);
-
-            // Redessine uniquement si l'état `hovered` a changé
             if (hovered !== this.hovered) {
                 this.hovered = hovered;
                 this.draw();
@@ -74,8 +75,8 @@ export class Button {
             const rect = this.ctx.canvas.getBoundingClientRect();
             const mouseX = event.clientX - rect.left;
             const mouseY = event.clientY - rect.top;
-
             if (this.isMouseOver(mouseX, mouseY)) {
+                this.sound.play();
                 this.action();
             }
         });

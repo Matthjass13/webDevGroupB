@@ -4,22 +4,30 @@ import { Level } from "./Level.js";
 /**
  * This class contains the whole game
  * and is used to switch between menu and level screen
+ * @see Menu
+ * @see Level
  * @author Matthias Gaillard
+ * @contributor Alexis Jordan
  */
 export class Game {
-  constructor(ctx) {
-    this.ctx = ctx;
-    this.currentScene = null;
-    this.menu = new Menu(ctx, this);
-  }
+    constructor(ctx) {
+        this.ctx = ctx;
+        this.currentScene = null;
+        this.menu = new Menu(ctx, this);
+    }
 
-  switchTo(sceneName, levelNumber = 1) {
-    if (this.currentScene && this.currentScene.stop) this.currentScene.stop();
+    switchTo(sceneName, levelNumber = 1) {
+        if (this.currentScene && this.currentScene.stop)
+            this.currentScene.stop();
 
-    if (sceneName === "Menu") this.currentScene = this.menu;
-    else if (sceneName === "Level")
-      this.currentScene = new Level(this.ctx, this, levelNumber);
+        if (sceneName === "Menu") {
+            this.currentScene = this.menu;
+        }
+        else if (sceneName === "Level")
+            this.currentScene = new Level(this.ctx, this, levelNumber);
 
-    if (this.currentScene && this.currentScene.start) this.currentScene.start();
-  }
+        if (this.currentScene && this.currentScene.start)
+            this.currentScene.start();
+    }
+
 }
