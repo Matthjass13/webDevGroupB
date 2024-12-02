@@ -9,17 +9,18 @@
  */
 export class ScoreBoard {
     constructor(x, y) {
+
         this.x = x;
         this.y = y;
         this.width = 300;
         this.height = 60;
+
 
         this.TOTAL_LIVES = 3;
         this.nbLives = this.TOTAL_LIVES;
         this.nbCoins = 0;
 
         this.hasKey = false;
-
 
         this.FOLDER = "ressources/images/game/level/scoreBoard/";
         this.loadSprites();
@@ -34,13 +35,16 @@ export class ScoreBoard {
         this.COIN_BAG_IMAGE.src = this.FOLDER + "coinBag.png";
         this.KEY_IMAGE = new Image();
         this.KEY_IMAGE.src = this.FOLDER + "key.png";
+
     }
+
+
     draw(ctx) {
         ctx.font = '50px Arial';
         ctx.fillStyle = "#FBD705";
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.drawImage(this.BACKGROUND_IMAGE, this.x, this.y, this.width + 40, this.height);
+        ctx.drawImage(this.BACKGROUND_IMAGE, this.x, this.y, this.width, this.height);
         ctx.drawImage(this.COIN_BAG_IMAGE, this.x + 5, this.y + 5,
                       this.COIN_BAG_IMAGE.width, this.COIN_BAG_IMAGE.height*(this.nbCoins)/10);
         ctx.fillText(this.nbCoins, this.x + 85, this.y + 35);
@@ -52,12 +56,13 @@ export class ScoreBoard {
         if(this.hasKey)
             ctx.drawImage(this.KEY_IMAGE, this.x + 290, this.y+10, this.KEY_IMAGE.width, this.KEY_IMAGE.height);
 
-
-
     }
+
+
     reset() {
         this.nbLives = this.TOTAL_LIVES;
         this.nbCoins = 0;
+        this.hasKey = false;
     }
     
 }

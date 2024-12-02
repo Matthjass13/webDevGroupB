@@ -18,7 +18,6 @@ export class Button {
         this.sound = new Audio("ressources/audio/soundEffects/buttonPressed.wav");
         this.sound.volume = 0.5;
         this.addCanvasEventListener();
-
     }
 
     draw() {
@@ -66,6 +65,7 @@ export class Button {
             const mouseX = event.clientX - rect.left;
             const mouseY = event.clientY - rect.top;
             const hovered = this.isMouseOver(mouseX, mouseY);
+
             if (hovered !== this.hovered) {
                 this.hovered = hovered;
                 this.draw();
@@ -75,8 +75,8 @@ export class Button {
             const rect = this.ctx.canvas.getBoundingClientRect();
             const mouseX = event.clientX - rect.left;
             const mouseY = event.clientY - rect.top;
+
             if (this.isMouseOver(mouseX, mouseY)) {
-                this.sound.play();
                 this.action();
             }
         });

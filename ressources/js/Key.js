@@ -5,7 +5,6 @@
  * @see ScoreBoard
  * @author Alexis Jordan
  */
-
 export class Key {
   constructor(x, y) {
     this.x = x;
@@ -21,5 +20,4 @@ export class Key {
       ctx.fillRect(this.x, this.y, this.width, this.height);
     }
   }
-
 }

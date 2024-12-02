@@ -12,15 +12,9 @@ Elia
 - Geolocalisation (for example in the menu page)
 
 Alexis
-Level2 class (maze)
-do a login page to the website
-- Form with HTML input and validation see optional JS
-- Drag'n Drop (for example building avatar)
 - JSON (Optional, game setup and JS website) for registration and high score
 
 Matthias
 Door sprite and class to add
-
 Problem of background image
-
 Integrates a tutorial video

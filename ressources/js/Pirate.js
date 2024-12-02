@@ -1,3 +1,5 @@
+import { Coin } from "./Coin.js";
+
 /**
  * This class represents the playable character
  * @author Matthias Gaillard
@@ -23,7 +25,7 @@ export class Pirate {
     this.runningLeftSprites = [];
     this.ready = false;
     this.SPRITES_FOLDER_PATH =
-        "ressources/images/game/level/characters/player/" + number + "/";
+      "ressources/images/game/level/characters/player/" + number + "/";
 
     this.idleSpriteIndex = 0;
     this.idleSpriteTimer = 0;
@@ -34,19 +36,18 @@ export class Pirate {
     this.runningSpriteTimer = 0;
     this.RUNNING_SPRITE_INTERVALLE = this.number === 0 ? 10 : 2;
     this.RUNNING_SPRITE_WIDTH = Math.floor(
-        (this.number === 0 ? 70 : 58) * 0.72
+      (this.number === 0 ? 70 : 58) * 0.72
     );
     this.RUNNING_SPRITE_HEIGHT = Math.floor(
-        (this.number === 0 ? 76 : 58) * 0.72
+      (this.number === 0 ? 76 : 58) * 0.72
     );
     this.RUNNING_SPRITE_QUANTITY = this.number === 0 ? 4 : 14;
 
+    this.currentSprite = this.idleRightSprites[0];
 
     this.loadSprites();
 
-
     this.footstepSound = new Audio("ressources/audio/soundEffects/footsteps.wav");
-
 
   }
 
@@ -54,22 +55,22 @@ export class Pirate {
     for (let i = 0; i < this.IDLE_SPRITE_QUANTITY; i++) {
       this.idleRightSprites[i] = new Image();
       this.idleRightSprites[i].src =
-          this.SPRITES_FOLDER_PATH + `idle/right/${i}.png`;
+        this.SPRITES_FOLDER_PATH + `idle/right/${i}.png`;
     }
     for (let i = 0; i < this.IDLE_SPRITE_QUANTITY; i++) {
       this.idleLeftSprites[i] = new Image();
       this.idleLeftSprites[i].src =
-          this.SPRITES_FOLDER_PATH + `idle/left/${i}.png`;
+        this.SPRITES_FOLDER_PATH + `idle/left/${i}.png`;
     }
     for (let i = 0; i < this.RUNNING_SPRITE_QUANTITY; i++) {
       this.runningRightSprites[i] = new Image();
       this.runningRightSprites[i].src =
-          this.SPRITES_FOLDER_PATH + `running/right/${i}.png`;
+        this.SPRITES_FOLDER_PATH + `running/right/${i}.png`;
     }
     for (let i = 0; i < this.RUNNING_SPRITE_QUANTITY; i++) {
       this.runningLeftSprites[i] = new Image();
       this.runningLeftSprites[i].src =
-          this.SPRITES_FOLDER_PATH + `running/left/${i}.png`;
+        this.SPRITES_FOLDER_PATH + `running/left/${i}.png`;
     }
     this.ready = true;
   }
@@ -80,7 +81,7 @@ export class Pirate {
   }
 
   updatePosition(modifier, keysDown) {
-
+    // Sauvegarder la position précédente
     this.previousX = this.x;
     this.previousY = this.y;
 
@@ -115,23 +116,23 @@ export class Pirate {
       this.footstepSound.pause();
       this.footstepSound.currentTime=0;
     }
+
   }
 
   updateSprite() {
     if (this.isRunning) {
       this.runningSpriteTimer =
-          (this.runningSpriteTimer + 1) % this.RUNNING_SPRITE_INTERVALLE;
+        (this.runningSpriteTimer + 1) % this.RUNNING_SPRITE_INTERVALLE;
       if (this.runningSpriteTimer === 0) {
-
         this.runningSpriteIndex =
-            (this.runningSpriteIndex + 1) % this.RUNNING_SPRITE_QUANTITY;
+          (this.runningSpriteIndex + 1) % this.RUNNING_SPRITE_QUANTITY;
       }
     } else {
       this.idleSpriteTimer =
-          (this.idleSpriteTimer + 1) % this.IDLE_SPRITE_INTERVALLE;
+        (this.idleSpriteTimer + 1) % this.IDLE_SPRITE_INTERVALLE;
       if (this.idleSpriteTimer === 0) {
         this.idleSpriteIndex =
-            (this.idleSpriteIndex + 1) % this.IDLE_SPRITE_QUANTITY;
+          (this.idleSpriteIndex + 1) % this.IDLE_SPRITE_QUANTITY;
       }
     }
   }
@@ -142,61 +143,65 @@ export class Pirate {
         case -1:
           if (this.isRunning)
             ctx.drawImage(
-                this.runningLeftSprites[this.runningSpriteIndex],
-                this.x,
-                this.y,
-                this.RUNNING_SPRITE_WIDTH,
-                this.RUNNING_SPRITE_HEIGHT
+              this.runningLeftSprites[this.runningSpriteIndex],
+              this.x,
+              this.y,
+              this.RUNNING_SPRITE_WIDTH,
+              this.RUNNING_SPRITE_HEIGHT
             );
           else
             ctx.drawImage(
-                this.idleLeftSprites[this.idleSpriteIndex],
-                this.x,
-                this.y,
-                this.RUNNING_SPRITE_WIDTH,
-                this.RUNNING_SPRITE_HEIGHT
+              this.idleLeftSprites[this.idleSpriteIndex],
+              this.x,
+              this.y,
+              this.RUNNING_SPRITE_WIDTH,
+              this.RUNNING_SPRITE_HEIGHT
             );
           break;
         case 1:
           if (this.isRunning)
             ctx.drawImage(
-                this.runningRightSprites[this.runningSpriteIndex],
-                this.x,
-                this.y,
-                this.RUNNING_SPRITE_WIDTH,
-                this.RUNNING_SPRITE_HEIGHT
+              this.runningRightSprites[this.runningSpriteIndex],
+              this.x,
+              this.y,
+              this.RUNNING_SPRITE_WIDTH,
+              this.RUNNING_SPRITE_HEIGHT
             );
           else
             ctx.drawImage(
-                this.idleRightSprites[this.idleSpriteIndex],
-                this.x,
-                this.y,
-                this.RUNNING_SPRITE_WIDTH,
-                this.RUNNING_SPRITE_HEIGHT
+              this.idleRightSprites[this.idleSpriteIndex],
+              this.x,
+              this.y,
+              this.RUNNING_SPRITE_WIDTH,
+              this.RUNNING_SPRITE_HEIGHT
             );
           break;
       }
     }
   }
 
-
-  /**
-   * Returns true if the pirate touches the element.
-   * @param element
-   * @returns {boolean}
-   */
-  touch(element) {
-    return !(
-        this.x + this.RUNNING_SPRITE_WIDTH <= element.x ||
-        element.x + element.width <= this.x ||
-        this.y + this.RUNNING_SPRITE_HEIGHT <= element.y ||
-        element.y + element.height <= this.y
+  touch(coin) {
+    return (
+      !(
+        this.x + this.RUNNING_SPRITE_WIDTH <= coin.x ||
+        coin.x + Coin.WIDTH <= this.x ||
+        this.y + this.RUNNING_SPRITE_HEIGHT <= coin.y ||
+        coin.y + Coin.HEIGHT <= this.y
+      ) && !coin.collected
     );
   }
 
+  touchElement(element) {
+    return !(
+      this.x + this.RUNNING_SPRITE_WIDTH <= element.x ||
+      element.x + element.width <= this.x ||
+      this.y + this.RUNNING_SPRITE_HEIGHT <= element.y ||
+      element.y + element.height <= this.y
+    );
+  }
 
   /**
-   * Reset the position and speed.
+   * Resets the position and speed.
    */
   reset() {
     this.x = this.BASE_X;
@@ -205,8 +210,6 @@ export class Pirate {
   }
 
   gainWeight(coin) {
-    if (this.number != 0)
-      this.speed -= coin.WEIGHT;
+    if (this.number != 0) this.speed -= coin.WEIGHT;
   }
-
 }
