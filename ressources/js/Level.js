@@ -3,6 +3,7 @@ import { ScoreBoard } from "./ScoreBoard.js";
 import { Coin } from "./Coin.js";
 import { wallsLevel1 } from "./wall.js";
 import { Key } from "./Key.js";
+import {Door} from "./Door.js";
 
 /**
  * This class displays a level.
@@ -53,11 +54,9 @@ export class Level {
     this.keyImage = new Image();
     this.keyImage.src = "ressources/images/game/level/elements/key.png"; // Image of the key
 
-
+    this.door = new Door(100, 100);
 
     this.soundTrack = new Audio("ressources/audio/soundTracks/caribbean.wav");
-
-
     this.soundTrack.volume = 0.1;
     this.soundTrack.play();
 
@@ -143,6 +142,7 @@ export class Level {
     if (!this.key.collected && this.pirate.touch(this.key)) {
 
       this.key.collected = true; // Mark the key as collected
+      this.door.open();
       this.scoreBoard.hasKey=true;
       // Remove the door by filtering out specific wall
       this.walls = this.walls.filter(
@@ -214,6 +214,8 @@ export class Level {
         this.key.height
       );
     }
+
+    //this.door.draw();
 
     // Draw each wall
     for (let wall of this.walls) {

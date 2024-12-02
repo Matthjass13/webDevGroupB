@@ -4,23 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1226690f-e42b-4509-940c-d564306b135e" name="Changes" comment="Updated toDo list (25.11.2024)">
+    <list default="true" id="1226690f-e42b-4509-940c-d564306b135e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_2024_11_14_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_2024_11_14__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/background/backgroundMenu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/background/level1.png" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/images/game/level/background/level1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/menu/background_menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/js/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/js/Coin.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/Coin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/js/Ennemy.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/Ennemy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/js/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/Game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/js/Key.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/Key.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameExample/game.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameExample/images/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameExample/images/hero.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameExample/images/monster.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameExample/js/game.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/js/Door.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/Door.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ressources/js/Level.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/Level.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/js/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/Menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/js/Pirate.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/Pirate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/js/ScoreBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/ScoreBoard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ressources/js/Todo" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/Todo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/js/wall.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/wall.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,25 +59,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.game.html.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Matthias",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Prêt Maintenant/Desktop/HES/Semestre3/WebDev/PirateWebSite/webDevGroupB/ressources/audio/soundEffects",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.game.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Matthias&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Prêt Maintenant/Desktop/HES/Semestre3/WebDev/PirateWebSite/webDevGroupB&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Prêt Maintenant\Desktop\HES\Semestre3\WebDev\PirateWebSite\webDevGroupB" />
       <recent name="C:\Users\Prêt Maintenant\Desktop\HES\Semestre3\WebDev\PirateWebSite\webDevGroupB\ressources\audio\soundEffects" />
       <recent name="C:\Users\Prêt Maintenant\Desktop\HES\Semestre3\WebDev\PirateWebSite\webDevGroupB\ressources\js" />
     </key>
@@ -94,19 +90,6 @@
   <component name="RunManager">
     <configuration name="game.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/webDevGroupB/game.html" useBuiltInWebServerPort="true">
       <method v="2" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="webDevGroupB" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="webDevGroupB" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <recent_temporary>
       <list>
@@ -140,6 +123,10 @@
       <workItem from="1732111026973" duration="366000" />
       <workItem from="1732111399625" duration="299000" />
       <workItem from="1732111709867" duration="63000" />
+      <workItem from="1732685414423" duration="1246000" />
+      <workItem from="1732691104520" duration="1145000" />
+      <workItem from="1732992782966" duration="2588000" />
+      <workItem from="1733126724525" duration="10037000" />
     </task>
     <task id="LOCAL-00001" summary="Extremely ugly and impractical code, but at least the link between the menu and the game works">
       <option name="closed" value="true" />
@@ -165,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731944066854</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Some tasks implemented like sounds but did not finish yet">
+      <option name="closed" value="true" />
+      <created>1732648984343</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732648984343</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,22 +180,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Extremely ugly and impractical code, but at least the link between the menu and the game works" />
     <MESSAGE value="The base game looks great ! A lot of functionalities are implemented like coins and 2nd character, but there is still a lot to do." />
-    <option name="LAST_COMMIT_MESSAGE" value="The base game looks great ! A lot of functionalities are implemented like coins and 2nd character, but there is still a lot to do." />
+    <MESSAGE value="Some tasks implemented like sounds but did not finish yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some tasks implemented like sounds but did not finish yet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/ressources/js/Menu.js</url>
-          <line>67</line>
+          <url>file://$PROJECT_DIR$/ressources/js/Level.js</url>
+          <line>175</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/ressources/js/Menu.js</url>
-          <line>64</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
