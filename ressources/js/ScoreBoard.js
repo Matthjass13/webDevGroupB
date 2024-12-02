@@ -3,6 +3,8 @@
  * This class represents the information about the character :
  * money, number of lives...
  * it is displayed on the top of the level.
+ * @see Level
+ * @see Coin
  * @author Matthias Gaillard
  */
 export class ScoreBoard {
@@ -18,6 +20,8 @@ export class ScoreBoard {
         this.nbLives = this.TOTAL_LIVES;
         this.nbCoins = 0;
 
+        this.hasKey = false;
+
         this.FOLDER = "ressources/images/game/level/scoreBoard/";
         this.loadSprites();
     }
@@ -29,6 +33,9 @@ export class ScoreBoard {
         this.HEART_IMAGE.src = this.FOLDER + "heart.png";
         this.COIN_BAG_IMAGE = new Image();
         this.COIN_BAG_IMAGE.src = this.FOLDER + "coinBag.png";
+        this.KEY_IMAGE = new Image();
+        this.KEY_IMAGE.src = this.FOLDER + "key.png";
+
     }
 
 
@@ -45,12 +52,17 @@ export class ScoreBoard {
         for(let i= 0; i<this.nbLives; ++i) {
             ctx.drawImage(this.HEART_IMAGE, this.x+120+(this.HEART_IMAGE.width+5)*i, this.y+10);
         }
+
+        if(this.hasKey)
+            ctx.drawImage(this.KEY_IMAGE, this.x + 290, this.y+10, this.KEY_IMAGE.width, this.KEY_IMAGE.height);
+
     }
 
 
     reset() {
         this.nbLives = this.TOTAL_LIVES;
         this.nbCoins = 0;
+        this.hasKey = false;
     }
     
 }

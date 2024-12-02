@@ -3,6 +3,7 @@ import { ScoreBoard } from "./ScoreBoard.js";
 import { Coin } from "./Coin.js";
 import { wallsLevel1, defaultWalls } from "./wall.js";
 import { Key } from "./Key.js";
+import { Door } from "./Door.js";
 
 /**
  * This class displays a level.
@@ -56,6 +57,13 @@ export class Level {
     this.key = new Key(230, 420); // Position of the key
     this.keyImage = new Image();
     this.keyImage.src = "ressources/images/game/level/elements/key.png"; // Image of the key
+
+    this.door = new Door(100, 100);
+
+    this.soundTrack = new Audio("ressources/audio/soundTracks/caribbean.wav");
+    this.soundTrack.volume = 0.1;
+    this.soundTrack.play();
+
   }
 
   // Start the level gameplay
@@ -80,6 +88,8 @@ export class Level {
           this.togglePause(); // Toggle pause state
         }
         if (e.key === "b" || e.key === "B") {
+          this.soundTrack.pause();
+          this.soundTrack.currentTime = 0;
           this.game.switchTo("Menu"); // Switch back to menu screen
         }
         if (e.key === "r" || e.key === "R") {
@@ -250,11 +260,15 @@ export class Level {
     if (!this.paused) {
       this.then = Date.now(); // Reset timestamp when resuming
       this.play();
-    }
+      this.soundTrack.play();
+    } else
+      this.soundTrack.pause();
   }
 
   // Reset the level to its initial state
   reset() {
+    this.soundTrack.currentTime = 0;
+    this.soundTrack.play();
     this.scoreBoard.reset(); // Reset the scoreboard
     this.pirate.reset(); // Reset the pirate's position and state
     // Recreate coins and position them randomly

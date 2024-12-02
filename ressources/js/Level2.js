@@ -4,6 +4,11 @@ import { Coin } from "./Coin.js";
 import { wallsLevel2, defaultWalls } from "./wall.js";
 import { Key } from "./Key.js";
 
+/**
+ * This class represents the second level.
+ * @see Level
+ * @author Alexis Jordan
+ */
 export class Level2 {
   constructor(ctx, game) {
     this.ctx = ctx; // Contexte du canvas

@@ -3,6 +3,7 @@ import { Coin } from "./Coin.js";
 /**
  * This class represents the playable character
  * @author Matthias Gaillard
+ * @contributor Alexis Jordan
  */
 export class Pirate {
   constructor(x, y, number = 0) {
@@ -45,6 +46,9 @@ export class Pirate {
     this.currentSprite = this.idleRightSprites[0];
 
     this.loadSprites();
+
+    this.footstepSound = new Audio("ressources/audio/soundEffects/footsteps.wav");
+
   }
 
   loadSprites() {
@@ -105,6 +109,14 @@ export class Pirate {
       this.y += this.speed * modifier;
       this.isRunning = true;
     }
+
+    if(this.isRunning) {
+      this.footstepSound.play();
+    } else {
+      this.footstepSound.pause();
+      this.footstepSound.currentTime=0;
+    }
+
   }
 
   updateSprite() {
@@ -188,6 +200,9 @@ export class Pirate {
     );
   }
 
+  /**
+   * Resets the position and speed.
+   */
   reset() {
     this.x = this.BASE_X;
     this.y = this.BASE_Y;

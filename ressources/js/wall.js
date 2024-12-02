@@ -1,3 +1,6 @@
+/**
+ * @author Alexis Jordan
+ */
 export class Wall {
   constructor(x, y, width, height) {
     this.x = x; // X-coordinate of the wall's top-left corner

@@ -1,10 +1,15 @@
-// Implementation of Level 3
 import { Pirate } from "./Pirate.js";
 import { ScoreBoard } from "./ScoreBoard.js";
 import { Coin } from "./Coin.js";
 import { wallsLevel3, defaultWalls } from "./wall.js";
 import { Key } from "./Key.js";
 
+
+/**
+ * This class represents the third level.
+ * @see Level
+ * @author Alexis Jordan
+ */
 export class Level3 {
   constructor(ctx, game) {
     console.log("Initializing Level 3");

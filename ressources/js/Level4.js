@@ -4,6 +4,11 @@ import { Coin } from "./Coin.js";
 import { wallsLevel4, defaultWalls } from "./wall.js";
 import { Key } from "./Key.js";
 
+/**
+ * This class represents the fourth level.
+ * @see Level
+ * @author Alexis Jordan
+ */
 export class Level4 {
   constructor(ctx, game) {
     this.ctx = ctx;

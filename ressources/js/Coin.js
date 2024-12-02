@@ -13,13 +13,13 @@ export class Coin {
         this.y = y;
         this.collected=false;
 
-
         this.WEIGHT = 15;
 
-        this.ready = false;
+
         this.SPRITE_QUANTITY = 6;
         this.sprite = [];
 
+        this.ready = false;
         for (let i = 0; i < this.SPRITE_QUANTITY; i++) {
             this.sprite[i] = new Image();
             this.sprite[i].src = `ressources/images/game/level/elements/coins/${i}.png`;
@@ -30,7 +30,8 @@ export class Coin {
         this.SPRITE_INTERVALLE = 5;
         this.spriteTimer = 0;
 
-        console.log(x + "," + y);
+        this.sound = new Audio("ressources/audio/soundEffects/coinCollected.wav");
+        this.sound.volume=0.2;
 
     }
     draw(ctx) {
