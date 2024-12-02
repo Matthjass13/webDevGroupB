@@ -5,7 +5,10 @@ import { Level } from "./Level.js";
  * This class displays the title screen of the game.
  * From there, we can access the game description and rules.
  * We can also launch a level, which is represented by its own class.
- * @author Elia Pfammatter, Matthias Gaillard
+ * @see Button
+ * @author Elia Pfammatter
+ * @contributor Matthias Gaillard
+ * @contributor Alexis Jordan
  */
 export class Menu {
   constructor(ctx, game) {
@@ -14,7 +17,7 @@ export class Menu {
 
     this.backgroundImage = new Image();
     this.backgroundImage.src =
-      "ressources/images/game/level/background/backgroundMenu.png";
+      "ressources/images/game/menu/background.png";
     this.backgroundImage.onload = () => {
       this.ctx.drawImage(
         this.backgroundImage,

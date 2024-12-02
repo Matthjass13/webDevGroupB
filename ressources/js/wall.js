@@ -1,3 +1,7 @@
+/**
+ * @author Alexis Jordan
+ */
+
 export class Wall {
   constructor(x, y, width, height) {
     this.x = x; // X-coordinate of the wall's top-left corner
@@ -56,10 +60,10 @@ export const wallsLevel2 = [
 
 // Wall definitions for level 3
 export const wallsLevel3 = [
-  ...defaultWalls,
   new Wall(200, 100, 400, 20), // Horizontal wall in the upper-middle part of the level
   new Wall(200, 100, 20, 400), // Vertical wall in the upper-middle part of the level
 ];
 
 // Wall definitions for level 4
-export const wallsLevel4 = [...defaultWalls, new Wall(400, 150, 20, 300)]; // Vertical wall in the center of the level
+export const wallsLevel4 = [new Wall(400, 150, 20, 300)];
+// Vertical wall in the center of the level

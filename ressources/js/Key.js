@@ -1,3 +1,11 @@
+/**
+ * This class represents a key.
+ * It will appear in the level,
+ * but also in the scoreBoard once the player has collected it.
+ * @see ScoreBoard
+ * @author Alexis Jordan
+ */
+
 export class Key {
   constructor(x, y) {
     this.x = x;
@@ -13,4 +21,5 @@ export class Key {
       ctx.fillRect(this.x, this.y, this.width, this.height);
     }
   }
+
 }
