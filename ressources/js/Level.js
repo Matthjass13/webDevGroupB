@@ -97,7 +97,6 @@ export class Level {
       false
     );
   }
-
   // Update the state of the level
   update(modifier) {
     // Save previous position of the pirate before updating
@@ -134,6 +133,7 @@ export class Level {
     // Detect collision with the key
     if (!this.key.collected && this.pirate.touchElement(this.key)) {
       this.key.collected = true; // Mark the key as collected
+      console.log("Key collected"); // Log message for debugging
       // Remove the door by filtering out specific wall
       this.walls = this.walls.filter(
         (wall) => !(wall.x === 340 && wall.y === 110) // Remove the door from the walls array
@@ -180,6 +180,13 @@ export class Level {
           this.pirate.y = wallBottom;
         }
       }
+    }
+
+    // Check if all coins are collected and the key has been collected
+    const allCoinsCollected = this.coins.every((coin) => coin.collected);
+    if (allCoinsCollected && this.key.collected) {
+      console.log("All conditions met, switching to Level 2"); // Debug message
+      this.game.switchTo("Level", 2); // Switch to the next level
     }
   }
 
