@@ -12,17 +12,14 @@ export class Coin {
         this.x = x;
         this.y = y;
         this.collected=false;
-
-
         this.WEIGHT = 15;
+        this.SPRITE_QUANTITY = 6;
+        this.sprites = [];
 
         this.ready = false;
-        this.SPRITE_QUANTITY = 6;
-        this.sprite = [];
-
         for (let i = 0; i < this.SPRITE_QUANTITY; i++) {
-            this.sprite[i] = new Image();
-            this.sprite[i].src = `ressources/images/game/level/elements/coins/${i}.png`;
+            this.sprites[i] = new Image();
+            this.sprites[i].src = `ressources/images/game/level/elements/coins/${i}.png`;
         }
         this.ready = true;
 
@@ -30,21 +27,25 @@ export class Coin {
         this.SPRITE_INTERVALLE = 5;
         this.spriteTimer = 0;
 
-        console.log(x + "," + y);
+        this.sound = new Audio("ressources/audio/soundEffects/coinCollected.wav");
+        this.sound.volume=0.2;
 
     }
+
     draw(ctx) {
         if(!this.collected) {
-            this.updateSprite();
-            ctx.drawImage(this.sprite[this.currentSpriteIndex], this.x, this.y, Coin.WIDTH, Coin.HEIGHT);
+            this.update();
+            ctx.drawImage(this.sprites[this.currentSpriteIndex], this.x, this.y, Coin.WIDTH, Coin.HEIGHT);
         }
     }
-
-    updateSprite() {
+    update() {
         this.spriteTimer = (this.spriteTimer + 1) % this.SPRITE_INTERVALLE;
         if (this.spriteTimer === 0) {
             this.currentSpriteIndex = (this.currentSpriteIndex + 1) % this.SPRITE_QUANTITY;
         }
     }
+
+
+
     
 }
