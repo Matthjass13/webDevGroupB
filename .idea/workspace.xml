@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1226690f-e42b-4509-940c-d564306b135e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_2024_11_14_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_2024_11_14__Changes_.xml" beforeDir="false" />
+    <list default="true" id="1226690f-e42b-4509-940c-d564306b135e" name="Changes" comment="Merging is complete between my code and Alexis's">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameExample/game.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameExample/images/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameExample/images/hero.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameExample/images/monster.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameExample/js/game.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/js/Door.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/Door.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/js/Level.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/Level.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ressources/js/Todo" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/Todo" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -181,7 +172,8 @@
     <MESSAGE value="Extremely ugly and impractical code, but at least the link between the menu and the game works" />
     <MESSAGE value="The base game looks great ! A lot of functionalities are implemented like coins and 2nd character, but there is still a lot to do." />
     <MESSAGE value="Some tasks implemented like sounds but did not finish yet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some tasks implemented like sounds but did not finish yet" />
+    <MESSAGE value="Merging is complete between my code and Alexis's" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merging is complete between my code and Alexis's" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -189,7 +181,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/ressources/js/Level.js</url>
           <line>175</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
