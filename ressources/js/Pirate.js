@@ -1,3 +1,5 @@
+import { Coin } from "./Coin.js";
+
 /**
  * This class represents the playable character
  * @author Matthias Gaillard
@@ -28,7 +30,7 @@ export class Pirate {
     this.idleSpriteIndex = 0;
     this.idleSpriteTimer = 0;
     this.IDLE_SPRITE_INTERVALLE = this.number === 0 ? 20 : 3;
-    this.IDLE_SPRITE_QUANTITY = this.number === 0 ? 2 : 26;
+    this.IDLE_SPRITE_QUANTITY = 2/*this.number === 0 ? 2 : 26;*/
 
     this.runningSpriteIndex = 0;
     this.runningSpriteTimer = 0;
@@ -39,7 +41,7 @@ export class Pirate {
     this.RUNNING_SPRITE_HEIGHT = Math.floor(
         (this.number === 0 ? 76 : 58) * 0.72
     );
-    this.RUNNING_SPRITE_QUANTITY = this.number === 0 ? 4 : 14;
+    this.RUNNING_SPRITE_QUANTITY = 4/*this.number === 0 ? 4 : 14;*/
 
 
     this.loadSprites();

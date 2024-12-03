@@ -14,14 +14,11 @@ export class Menu {
   constructor(ctx, game) {
     this.ctx = ctx;
     this.game = game;
-    this.selectedCharacter;
+    this.selectedCharacter = 0;
     this.characters = [];
     this.loadCharacterImages();
-    this.time = "";
-    this.location = "";
-
-    this.updateLocation();
-    this.updateTime();
+    this.time = new Date().toLocaleTimeString(); 
+    this.location = "Fetching location...";
 
 
     this.backgroundImage = new Image();
@@ -71,6 +68,23 @@ export class Menu {
       ctx.canvas.height - 50,
       () => this.selectCharacter()
     );
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const lat = position.coords.latitude.toFixed(2);
+          const lon = position.coords.longitude.toFixed(2);
+          this.location = `Lat: ${lat}, Lon: ${lon}`;
+        },
+        (error) => {
+          console.error("Geolocation error:", error);
+          this.location = "Location unavailable"; 
+        }
+      );
+    } else {
+      console.warn("Geolocation is not supported by this browser.");
+      this.location = "Geolocation not supported";
+    }
   }
 
   start() {
@@ -81,52 +95,30 @@ export class Menu {
     this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
   }
 
-  updateTime() {
-    setInterval(() => {
-      this.time = new Date().toLocaleTimeString();
-      this.renderTime(); // Update only the time
-    }, 1000); // Update every second
-  }
-
-  renderTime() {
-    // Clear only the area where the time is displayed
-    const clearX = 10; 
-    const clearY = 10; 
-    const clearWidth = 200; 
-    const clearHeight = 30; 
-    this.ctx.clearRect(clearX, clearY, clearWidth, clearHeight);
-    // Redraw the time text 
-    const timeX = 10;
-    const timeY = 30;
+  drawTimeAndLocation() {
+    // Update the current time
+    this.time = new Date().toLocaleTimeString();
+  
+    // Font and alignment setup
     this.ctx.font = "16px Arial";
     this.ctx.textAlign = "left";
     this.ctx.lineWidth = 3;
+  
+    // Time display
+    const timeX = 10; 
+    const timeY = 30; 
     this.ctx.strokeStyle = "white"; 
     this.ctx.fillStyle = "black"; 
-    this.ctx.strokeText(`Time: ${this.time}`, timeX, timeY);
-    this.ctx.fillText(`Time: ${this.time}`, timeX, timeY);
+    this.ctx.strokeText(`Time: ${this.time}`, timeX, timeY); 
+    this.ctx.fillText(`Time: ${this.time}`, timeX, timeY); 
+  
+    // Location display
+    const locationY = timeY + 20; 
+    this.ctx.strokeText(`Location: ${this.location}`, timeX, locationY); 
+    this.ctx.fillText(`Location: ${this.location}`, timeX, locationY); 
   }
   
   
-
-  updateLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const latitude = position.coords.latitude.toFixed(2);
-          const longitude = position.coords.longitude.toFixed(2);
-          this.location = `Lat: ${latitude}, Lon: ${longitude}`;
-          this.drawTitleScreen(); // Redraw after location is fetched
-        },
-        (error) => {
-          console.error("Error fetching location:", error.message);
-          this.location = "Location unavailable";
-        }
-      );
-    } else {
-      this.location = "Geolocation not supported";
-    }
-  }
 
   loadCharacterImages() {
     const characterPaths = [
@@ -155,6 +147,7 @@ export class Menu {
     this.rulesButton.draw();
     this.descriptionButton.draw();
     this.characterButton.draw();
+    this.drawTimeAndLocation();
   }
   drawTitleScreen() {
     this.drawBasis();
@@ -273,7 +266,7 @@ export class Menu {
       this.ctx.fillStyle = "#000000";
       this.ctx.font = "20px Arial";
       this.ctx.fillText(
-        `Character ${index + 1}`,
+        `Character ${index}`,
         x + optionWidth / 2,
         y + optionHeight + 20
       );
@@ -299,6 +292,9 @@ export class Menu {
           console.log(`Selected character: ${index}`);
           this.ctx.canvas.removeEventListener("click", handleClick); // Remove the listener
           this.start(); // Return to the main menu screen
+          if (selectedCharacter > 1) {
+            selectedCharacter = 0; // Default to Player 0 if Player 2 is invalid
+          }
         }
       });
     };
