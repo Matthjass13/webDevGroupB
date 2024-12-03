@@ -1,10 +1,16 @@
 import { Menu } from "./Menu.js";
 import { Level } from "./Level.js";
+import { Level2 } from "./Level2.js";
+import { Level3 } from "./Level3.js";
+import { Level4 } from "./Level4.js";
 
 /**
  * This class contains the whole game
  * and is used to switch between menu and level screen
+ * @see Menu
+ * @see Level
  * @author Matthias Gaillard
+ * @contributor Alexis Jordan
  */
 export class Game {
   constructor(ctx) {

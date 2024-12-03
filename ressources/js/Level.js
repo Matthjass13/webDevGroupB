@@ -1,7 +1,7 @@
 import { Pirate } from "./Pirate.js";
 import { ScoreBoard } from "./ScoreBoard.js";
 import { Coin } from "./Coin.js";
-import { wallsLevel1, defaultWalls } from "./wall.js";
+import { wallsLevel1 } from "./wall.js";
 import { Key } from "./Key.js";
 import { Enemy } from "./Enemy.js";
 import { Menu } from "./Menu.js"; 
@@ -12,6 +12,7 @@ import { Menu } from "./Menu.js";
  * press R to reset the game,
  * and press B to go back to the game title screen.
  * @author Matthias Gaillard
+ * @contributor Alexis Jordan
  */
 export class Level {
   constructor(ctx, game, selectedCharacter) {
@@ -45,7 +46,7 @@ export class Level {
     this.then = Date.now(); // Timestamp to manage animation frames
     this.setupKeyboardListeners(); // Set up keyboard input listeners
 
-    this.NB_COINS = 10; // Number of coins to spawn in the level
+    this.NB_COINS = 3; // Number of coins to spawn in the level
 
     // Create an array of coins and position them randomly on the canvas
     this.coins = new Array(this.NB_COINS);
@@ -60,12 +61,17 @@ export class Level {
       );
 
     // Define the walls for the level (using default and level-specific walls)
-    this.walls = [...defaultWalls, ...wallsLevel1];
+    this.walls = wallsLevel1;
 
     // Add the key to the level
     this.key = new Key(230, 420); // Position of the key
     this.keyImage = new Image();
     this.keyImage.src = "ressources/images/game/level/elements/key.png"; // Image of the key
+
+    this.soundTrack = new Audio("ressources/audio/soundTracks/caribbean.wav");
+
+    this.soundTrack.volume = 0.1;
+    this.soundTrack.play();
   }
 
   // Start the level gameplay
@@ -90,6 +96,8 @@ export class Level {
           this.togglePause(); // Toggle pause state
         }
         if (e.key === "b" || e.key === "B") {
+          this.soundTrack.pause();
+          this.soundTrack.currentTime = 0;
           this.game.switchTo("Menu"); // Switch back to menu screen
         }
         if (e.key === "r" || e.key === "R") {
@@ -152,7 +160,8 @@ export class Level {
 
     // Check for collisions between the pirate and coins
     for (let coin of this.coins) {
-      if (this.pirate.touch(coin)) {
+      if (this.pirate.touch(coin) && !coin.collected) {
+        coin.sound.play();
         coin.collected = true; // Mark coin as collected
         ++this.scoreBoard.nbCoins; // Increase coin count on scoreboard
         this.pirate.gainWeight(coin); // Pirate gains weight when collecting a coin
@@ -160,8 +169,9 @@ export class Level {
     }
 
     // Detect collision with the key
-    if (!this.key.collected && this.pirate.touchElement(this.key)) {
+    if (!this.key.collected && this.pirate.touch(this.key)) {
       this.key.collected = true; // Mark the key as collected
+      this.scoreBoard.hasKey = true;
       // Remove the door by filtering out specific wall
       this.walls = this.walls.filter(
         (wall) => !(wall.x === 340 && wall.y === 110) // Remove the door from the walls array
@@ -170,7 +180,7 @@ export class Level {
 
     // Handle collisions between the pirate and walls
     for (let wall of this.walls) {
-      if (this.pirate.touchElement(wall)) {
+      if (this.pirate.touch(wall)) {
         // Determine from which side the collision occurred
         const pirateRight = this.pirate.x + this.pirate.RUNNING_SPRITE_WIDTH;
         const pirateLeft = this.pirate.x;
@@ -208,6 +218,13 @@ export class Level {
           this.pirate.y = wallBottom;
         }
       }
+    }
+
+    // Check if all coins are collected and the key has been collected
+    const allCoinsCollected = this.coins.every((coin) => coin.collected);
+    if (allCoinsCollected && this.key.collected) {
+      console.log("All conditions met, switching to Level 2"); // Debug message
+      this.game.switchTo("Level", 2); // Switch to the next level
     }
   }
 
@@ -274,11 +291,16 @@ export class Level {
     if (!this.paused) {
       this.then = Date.now(); // Reset timestamp when resuming
       this.play();
+      this.soundTrack.play();
+    } else {
+      this.soundTrack.pause();
     }
   }
 
   // Reset the level to its initial state
   reset() {
+    this.soundTrack.currentTime = 0;
+    this.soundTrack.play();
     this.scoreBoard.reset(); // Reset the scoreboard
     this.pirate.reset(); // Reset the pirate's position and state
     // Recreate coins and position them randomly
@@ -292,6 +314,6 @@ export class Level {
           ))
       );
     this.key.collected = false; // Reset the key's state
-    this.walls = [...defaultWalls, ...wallsLevel1]; // Reset the walls to default
+    this.walls = wallsLevel1; // Reset the walls to default
   }
 }
