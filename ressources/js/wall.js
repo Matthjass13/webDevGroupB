@@ -59,9 +59,28 @@ export const wallsLevel2 = [
 
 // Wall definitions for level 3
 export const wallsLevel3 = [
-  ...defaultWalls,
-  new Wall(200, 100, 400, 20), // Horizontal wall in the upper-middle part of the level
-  new Wall(200, 100, 20, 400), // Vertical wall in the upper-middle part of the level
+  new Wall(118, 90, 5, 400), //OK
+  new Wall(270, 170, 5, 230), //ok
+  new Wall(440, 220, 5, 169), //ok
+
+  new Wall(320, 260, 120, 5), //ok
+
+  new Wall(325, 375, 110, 5), //ok
+  new Wall(118, 85, 80, 20), //OK mur a cote de door
+  new Wall(250, 85, 80, 20), //OK mur a cote de door
+  new Wall(195, 85, 55, 20), // Door wall (removable)
+  new Wall(325, 0, 5, 90), //mur vertical droite près de la porte
+
+  new Wall(487, 310, 60, 5), //bas de la petite plate forme
+  new Wall(484, 210, 5, 85), //gauche de la petite plate forme
+  new Wall(545, 270, 5, 45), //droite de la petite plate forme
+
+  //mur de la passerelle
+  new Wall(446, 205, 40, 5), //mur horizontal bas d
+  new Wall(530, 165, 5, 90), //mur vertical droite
+
+  //mur traversable d'un coté
+  new Wall(270, 160, 258, 5), //haut de la grosse plate forme donc pirate peut traverser si il est plus bas et qu'il monte e
 ];
 
 // Wall definitions for level 4
