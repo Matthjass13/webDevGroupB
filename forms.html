@@ -156,17 +156,33 @@
         dropArea.classList.add("dragging");
       });
 
-      dropArea.addEventListener("dragleave", () =>
-        dropArea.classList.remove("dragging")
-      );
+      dropArea.addEventListener("dragleave", () => {
+        dropArea.classList.remove("dragging");
+      });
 
       dropArea.addEventListener("drop", (e) => {
         e.preventDefault();
         dropArea.classList.remove("dragging");
         fileInput.files = e.dataTransfer.files;
+
+        // Update the drop area with the file name
+        if (fileInput.files.length > 0) {
+          dropArea.querySelector(
+            "p"
+          ).textContent = `Fichier sélectionné : ${fileInput.files[0].name}`;
+        }
       });
 
-      // JavaScript to handle form submission and create JSON file
+      // Handle file selection via file input
+      fileInput.addEventListener("change", () => {
+        if (fileInput.files.length > 0) {
+          dropArea.querySelector(
+            "p"
+          ).textContent = `Fichier sélectionné : ${fileInput.files[0].name}`;
+        }
+      });
+
+      // JavaScript to handle form submission and send data to server
       document
         .getElementById("registration-form")
         .addEventListener("submit", function (event) {
@@ -178,29 +194,29 @@
             password: document.getElementById("password").value,
           };
 
-          // Convert the form data to JSON
-          const jsonData = JSON.stringify(formData);
-          console.log("Form data in JSON format:", jsonData);
-
-          // Create and download JSON file
-          const blob = new Blob([jsonData], { type: "application/json" });
-          const url = URL.createObjectURL(blob);
-          const a = document.createElement("a");
-          a.href = url;
-          a.download = "registrationData.json";
-          a.click();
-          URL.revokeObjectURL(url);
-
-          // Store data in localStorage to mark registration as complete
-          localStorage.setItem("isRegistered", true);
-          alert("Inscription réussie. Vous pouvez maintenant accéder au jeu.");
-
-          // Enable the game link after registration
-          document.getElementById("game-link").classList.remove("disabled");
-          document.getElementById("game-link").removeAttribute("href");
-          document
-            .getElementById("game-link")
-            .setAttribute("href", "game.html");
+          // Send the form data to the local server to update the JSON file
+          fetch("http://localhost:3001/update-json", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          })
+            .then((response) => response.text())
+            .then((data) => {
+              console.log("Succès :", data);
+              alert(
+                "Inscription réussie. Vous pouvez maintenant accéder au jeu."
+              );
+              localStorage.setItem("isRegistered", true);
+              document.getElementById("game-link").classList.remove("disabled");
+              document
+                .getElementById("game-link")
+                .setAttribute("href", "game.html");
+            })
+            .catch((error) => {
+              console.error("Erreur :", error);
+            });
         });
 
       // Disable the game link if not registered
