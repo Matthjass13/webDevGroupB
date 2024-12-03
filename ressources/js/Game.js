@@ -13,13 +13,15 @@ export class Game {
     this.menu = new Menu(ctx, this);
   }
 
-  switchTo(sceneName, levelNumber = 1) {
+  switchTo(sceneName, selectedCharacter = 0) {
     if (this.currentScene && this.currentScene.stop) this.currentScene.stop();
-
-    if (sceneName === "Menu") this.currentScene = this.menu;
-    else if (sceneName === "Level")
-      this.currentScene = new Level(this.ctx, this, levelNumber);
-
+  
+    if (sceneName === "Menu") {
+      this.currentScene = this.menu;
+    } else if (sceneName === "Level") {
+      this.currentScene = new Level(this.ctx, this, selectedCharacter);
+    }
+  
     if (this.currentScene && this.currentScene.start) this.currentScene.start();
-  }
+  }  
 }
