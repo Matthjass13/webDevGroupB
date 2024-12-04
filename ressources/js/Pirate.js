@@ -4,6 +4,7 @@ import { Coin } from "./Coin.js";
  * This class represents the playable character
  * @author Matthias Gaillard
  * @contributor Alexis Jordan
+ * @contributor Elia Pfammatter
  */
 export class Pirate {
   constructor(x, y, number = 0) {
@@ -188,6 +189,17 @@ export class Pirate {
         this.y + this.RUNNING_SPRITE_HEIGHT <= coin.y ||
         coin.y + Coin.HEIGHT <= this.y
       ) && !coin.collected
+    );
+  }
+
+  touchEnemy(enemy) {
+    return (
+        !(
+            this.x + this.RUNNING_SPRITE_WIDTH <= enemy.x ||
+            enemy.x + enemy.width <= this.x ||
+            this.y + this.RUNNING_SPRITE_HEIGHT <= enemy.y ||
+            enemy.y + enemy.height <= this.y
+        )
     );
   }
 

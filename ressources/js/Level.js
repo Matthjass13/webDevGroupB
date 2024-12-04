@@ -4,6 +4,7 @@ import { Coin } from "./Coin.js";
 import { wallsLevel1, defaultWalls } from "./wall.js";
 import { Key } from "./Key.js";
 import { Door } from "./Door.js";
+import {Enemy} from "./Ennemy.js";
 
 /**
  * This class displays a level.
@@ -13,12 +14,13 @@ import { Door } from "./Door.js";
  * @author Matthias Gaillard
  */
 export class Level {
-  constructor(ctx, game) {
+  constructor(ctx, game, selectedCharacter) {
     this.ctx = ctx; // Reference to the canvas context
     this.game = game; // Reference to the game instance
     this.paused = false; // Boolean to track if the game is paused
     this.WIDTH = ctx.canvas.width; // Width of the canvas
     this.HEIGHT = ctx.canvas.height; // Height of the canvas
+    this.selectedCharacter = selectedCharacter;
 
     // Load background image for the level
     this.bgImage = new Image();
@@ -28,8 +30,13 @@ export class Level {
     this.pirate = new Pirate(
       this.ctx.canvas.width / 2,
       this.ctx.canvas.height / 2,
-      1
+      this.selectedCharacter
     );
+
+    this.enemy = new Enemy(
+        300, 200, 600, 200, 100, 0
+    );
+
     this.scoreBoard = new ScoreBoard(0, 0); // Create a scoreboard instance
     this.keysDown = {}; // Object to track keys pressed
 
@@ -107,6 +114,18 @@ export class Level {
       false
     );
   }
+
+  handlePlayerHitEnemy() {
+    this.scoreBoard.lives -= 1;
+    // Check if game over
+    if (this.scoreBoard.lives <= 0) {
+      console.log("Game Over!");
+    } else {
+      console.log("Player hit!");
+    }
+  }
+
+
   // Update the state of the level
   update(modifier) {
     // Save previous position of the pirate before updating
@@ -130,6 +149,11 @@ export class Level {
         this.ctx.canvas.height - this.pirate.RUNNING_SPRITE_HEIGHT
       )
     );
+
+    if (this.pirate.touchEnemy(this.enemy)) {
+      console.log("Collison with enemy")
+      this.handlePlayerHitEnemy();
+    }
 
     // Check for collisions between the pirate and coins
     for (let coin of this.coins) {
@@ -196,7 +220,7 @@ export class Level {
     const allCoinsCollected = this.coins.every((coin) => coin.collected);
     if (allCoinsCollected && this.key.collected) {
       console.log("All conditions met, switching to Level 2"); // Debug message
-      this.game.switchTo("Level", 2); // Switch to the next level
+      this.game.switchTo("Level", 2, this.selectedCharacter); // Switch to the next level
     }
   }
 
@@ -216,6 +240,8 @@ export class Level {
     for (let coin of this.coins) coin.draw(this.ctx);
     // Render the pirate character
     this.pirate.render(this.ctx);
+    // Render the enemy
+    this.enemy.render(this.ctx);
 
     // Draw the key if it has not been collected
     if (!this.key.collected) {

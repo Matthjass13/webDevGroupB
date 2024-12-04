@@ -19,19 +19,22 @@ export class Game {
     this.menu = new Menu(ctx, this);
   }
 
-  switchTo(sceneName, levelNumber = 1) {
+  switchTo(sceneName, levelNumber = 1, selectedCharacter=0) {
     console.log(`Switching to scene: ${sceneName}, level: ${levelNumber}`);
     if (this.currentScene && this.currentScene.stop) this.currentScene.stop();
 
     if (sceneName === "Menu") this.currentScene = this.menu;
     else if (sceneName === "Level") {
-      if (levelNumber === 1) this.currentScene = new Level(this.ctx, this);
+      if (levelNumber === 1) {
+        console.log("hello");
+        this.currentScene = new Level(this.ctx, this, selectedCharacter);
+      }
       else if (levelNumber === 2)
-        this.currentScene = new Level2(this.ctx, this);
+        this.currentScene = new Level2(this.ctx, this, selectedCharacter);
       else if (levelNumber === 3)
-        this.currentScene = new Level3(this.ctx, this);
+        this.currentScene = new Level3(this.ctx, this, selectedCharacter);
       else if (levelNumber === 4)
-        this.currentScene = new Level4(this.ctx, this);
+        this.currentScene = new Level4(this.ctx, this, selectedCharacter);
     }
 
     this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);

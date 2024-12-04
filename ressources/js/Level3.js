@@ -10,13 +10,14 @@ import { Key } from "./Key.js";
  * @author Alexis Jordan
  */
 export class Level3 {
-  constructor(ctx, game) {
+  constructor(ctx, game, selectedCharacter) {
     console.log("Initializing Level 3");
     this.ctx = ctx; // Reference to the canvas context
     this.game = game; // Reference to the game instance
     this.paused = false; // Boolean to track if the game is paused
     this.WIDTH = ctx.canvas.width; // Width of the canvas
     this.HEIGHT = ctx.canvas.height; // Height of the canvas
+    this.selectedCharacter = selectedCharacter;
 
     // Load background image for the level
     this.bgImage = new Image();
@@ -26,7 +27,7 @@ export class Level3 {
     this.pirate = new Pirate(
         this.ctx.canvas.width / 2,
         this.ctx.canvas.height / 2,
-        1
+        this.selectedCharacter = selectedCharacter
     );
     this.scoreBoard = new ScoreBoard(0, 0); // Create a scoreboard instance
     this.keysDown = {}; // Object to track keys pressed
@@ -194,7 +195,7 @@ export class Level3 {
     // Check if all coins are collected and the key has been collected
     const allCoinsCollected = this.coins.every((coin) => coin.collected);
     if (allCoinsCollected && this.key.collected) {
-      this.game.switchTo("Level", 4); // Switch to the next level
+      this.game.switchTo("Level", 4, this.selectedCharacter); // Switch to the next level
     }
   }
 

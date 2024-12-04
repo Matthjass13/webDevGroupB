@@ -10,12 +10,13 @@ import { Key } from "./Key.js";
  * @author Alexis Jordan
  */
 export class Level4 {
-  constructor(ctx, game) {
+  constructor(ctx, game, selectedCharacter) {
     this.ctx = ctx;
     this.game = game;
     this.paused = false;
     this.WIDTH = ctx.canvas.width;
     this.HEIGHT = ctx.canvas.height;
+    this.selectedCharacter = selectedCharacter;
 
     this.bgImage = new Image();
     this.bgImage.src = "ressources/images/game/level/background/level4.png";
@@ -23,7 +24,7 @@ export class Level4 {
     this.pirate = new Pirate(
       this.ctx.canvas.width / 2,
       this.ctx.canvas.height / 2,
-      1
+        this.selectedCharacter = selectedCharacter
     );
     this.scoreBoard = new ScoreBoard(0, 0);
     this.keysDown = {};
@@ -151,7 +152,7 @@ export class Level4 {
 
     const allCoinsCollected = this.coins.every((coin) => coin.collected);
     if (allCoinsCollected && this.key.collected) {
-      this.game.switchTo("Level", 5);
+      this.game.switchTo("Level", 5, this.selectedCharacter);
     }
   }
 

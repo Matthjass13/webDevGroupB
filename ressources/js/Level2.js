@@ -10,12 +10,13 @@ import { Key } from "./Key.js";
  * @author Alexis Jordan
  */
 export class Level2 {
-  constructor(ctx, game) {
+  constructor(ctx, game, selectedCharacter) {
     this.ctx = ctx; // Contexte du canvas
     this.game = game; // Instance du jeu
     this.paused = false; // Indicateur de pause
     this.WIDTH = ctx.canvas.width; // Largeur du canvas
     this.HEIGHT = ctx.canvas.height; // Hauteur du canvas
+    this.selectedCharacter = selectedCharacter;
 
     // Chargement de l'image de fond du niveau
     this.bgImage = new Image();
@@ -25,7 +26,7 @@ export class Level2 {
     this.pirate = new Pirate(
       this.ctx.canvas.width / 2,
       this.ctx.canvas.height / 2,
-      1
+        this.selectedCharacter = selectedCharacter
     );
     this.scoreBoard = new ScoreBoard(0, 0); // Instance du tableau des scores
     this.keysDown = {}; // Objet pour suivre les touches pressées
@@ -169,7 +170,7 @@ export class Level2 {
     // Vérifier si toutes les pièces ont été collectées pour passer au niveau suivant
     const allCoinsCollected = this.coins.every((coin) => coin.collected);
     if (allCoinsCollected && this.key.collected) {
-      this.game.switchTo("Level", 3);
+      this.game.switchTo("Level", 3, this.selectedCharacter);
     }
   }
 
