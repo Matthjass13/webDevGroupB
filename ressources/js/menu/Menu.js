@@ -1,5 +1,4 @@
 import { Button } from "./Button.js";
-import { Level1 } from "../levels/Level1.js";
 
 /**
  * This class displays the title screen of the game.

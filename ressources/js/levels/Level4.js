@@ -1,11 +1,11 @@
 import { wallsLevel4, defaultWalls } from "../elements/Wall.js";
 import { Key } from "../elements/Key.js";
 import { Door } from "../elements/Door.js";
-import { Enemy } from "../characters/Ennemy.js";
+import { Enemy } from "../characters/Enemy.js";
 import { Level } from "./Level.js";
 
 /**
- * This class displays the level 1.
+ * This class displays the level 4.
  * @author Alexis Jordan
  * @see Level
  */

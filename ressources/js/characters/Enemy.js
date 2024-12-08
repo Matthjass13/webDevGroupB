@@ -44,10 +44,8 @@ export class Enemy {
 
         const onSpriteLoaded = () => {
             loadedCount++;
-            console.log(loadedCount);
             if (loadedCount === totalSprites) {
                 this.ready = true; // Set ready to true only when all sprites are loaded
-                console.log("Enemy sprites fully loaded");
             }
         };
 
@@ -137,11 +135,10 @@ export class Enemy {
         }
     }
 
-
-
     reset() {
         this.x = this.startX;
         this.y = this.startY;
         this.currentDistance = 0;
     }
+
 }

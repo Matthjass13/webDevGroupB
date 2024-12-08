@@ -9,9 +9,9 @@ import { Element } from "./Element.js";
  */
 
 export class Door extends Element {
-    constructor(x, y) {
+    constructor(x, y, width= 39, height = 44) {
 
-        super(x, y, 39, 44);
+        super(x, y, width, height);
 
         this.state="closed";
         this.SPRITE_QUANTITY = 6;

@@ -1,11 +1,11 @@
 import { wallsLevel3, defaultWalls } from "../elements/Wall.js";
 import { Key } from "../elements/Key.js";
 import { Door } from "../elements/Door.js";
-import { Enemy } from "../characters/Ennemy.js";
+import { Enemy } from "../characters/Enemy.js";
 import { Level } from "./Level.js";
 
 /**
- * This class displays the level 1.
+ * This class displays the level 3.
  * @author Alexis Jordan
  * @see Level
  */
@@ -14,7 +14,7 @@ export class Level3 extends Level {
 
     super(ctx, game, selectedCharacter, 3,
         new Key(500, 280),
-        new Door(195, 85),
+        new Door(195, 65, 58, 60),
         new Enemy(300, 200, 600, 200, 120, 0)
     );
 

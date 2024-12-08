@@ -1,4 +1,6 @@
 import { Menu } from "./menu/Menu.js";
+
+import { Level0 } from "./levels/Level0.js";
 import { Level1 } from "./levels/Level1.js";
 import { Level2 } from "./levels/Level2.js";
 import { Level3 } from "./levels/Level3.js";
@@ -16,7 +18,8 @@ export class Game {
   constructor(ctx) {
     this.ctx = ctx;
     this.currentScene = null;
-    this.menu = new Menu(ctx, this);
+    this.menu = new Level0(this.ctx, this, 1);
+    //this.menu = new Menu(ctx, this);
   }
 
   switchTo(sceneType, levelNumber = 1, selectedCharacter= 1) {
@@ -27,6 +30,9 @@ export class Game {
     else {
       if (sceneType === "Level") {
         switch (levelNumber) {
+          case 0:
+            this.currentScene = new Level0(this.ctx, this, selectedCharacter);
+            break;
           case 1:
             this.currentScene = new Level1(this.ctx, this, selectedCharacter);
             break;

@@ -4,7 +4,7 @@ import { Coin } from "../elements/Coin.js";
 import { wallsLevel1, defaultWalls } from "../elements/Wall.js";
 import { Key } from "../elements/Key.js";
 import { Door } from "../elements/Door.js";
-import { Enemy } from "../characters/Ennemy.js";
+import { Enemy } from "../characters/Enemy.js";
 
 /**
  * This class is an abstract level.
@@ -12,14 +12,15 @@ import { Enemy } from "../characters/Ennemy.js";
  * @author Matthias Gaillard
  */
 export class Level {
-    constructor(ctx, game, selectedCharacter, number, key, door, ennemy) {
+
+    constructor(ctx, game, selectedCharacter, number, key=null, door=null, enemy=null) {
         this.ctx = ctx;
         this.game = game;
         this.selectedCharacter = selectedCharacter;
         this.number=number;
         this.key=key;
         this.door=door;
-        this.ennemy=ennemy;
+        this.enemy=enemy;
 
         this.WIDTH = ctx.canvas.width;
         this.HEIGHT = ctx.canvas.height;
@@ -109,6 +110,17 @@ export class Level {
 
     update(modifier) {
 
+        this.updatePirate(modifier);
+
+        this.updateEnnemy(modifier);
+
+        this.updateWalls();
+
+        this.updateScoreBoard();
+
+    }
+
+    updatePirate(modifier) {
         this.pirate.previousX = this.pirate.x;
         this.pirate.previousY = this.pirate.y;
         this.pirate.update(modifier, this.keysDown);
@@ -126,14 +138,15 @@ export class Level {
                 this.ctx.canvas.height - this.pirate.RUNNING_SPRITE_HEIGHT
             )
         );
-
-        this.ennemy.update(modifier);
-        if (this.pirate.touch(this.ennemy)) {
+    }
+    updateEnnemy(modifier) {
+        this.enemy.update(modifier);
+        if (this.pirate.touch(this.enemy)) {
             console.log("Collison with enemy");
             //this.handlePlayerHitEnemy();
         }
-
-        // Handle collisions between the pirate and walls
+    }
+    updateWalls() {
         for (let wall of this.walls) {
             if (this.pirate.touchElement(wall)) {
                 // Determine from which side the collision occurred
@@ -182,7 +195,9 @@ export class Level {
                 (wall) => !(wall.x === this.DOOR_WALL_X && wall.y ===  this.DOOR_WALL_Y)
             );
         }
+    }
 
+    updateScoreBoard() {
         for (let coin of this.coins) {
             if (this.pirate.touch(coin)) {
                 coin.collected = true;
@@ -190,21 +205,22 @@ export class Level {
                 this.pirate.gainWeight(coin);
             }
         }
-
         const allCoinsCollected = this.coins.every((coin) => coin.collected);
-        if (allCoinsCollected && this.key.collected) {
+        if (allCoinsCollected && (this.key===null || this.key.collected)) {
+            console.log(allCoinsCollected + "allcoins");
             this.game.switchTo("Level", this.number+1, this.selectedCharacter);
         }
-
         this.scoreBoard.update(this.pirate, this.key);
     }
+
+
 
     draw() {
         this.ctx.drawImage(this.bgImage, 0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
         this.scoreBoard.draw(this.ctx);
         this.door.draw(this.ctx);
         for (let coin of this.coins) coin.draw(this.ctx);
-        this.ennemy.render(this.ctx);
+        this.enemy.render(this.ctx);
         this.pirate.render(this.ctx);
         this.key.draw(this.ctx);
         for (let wall of this.walls) {

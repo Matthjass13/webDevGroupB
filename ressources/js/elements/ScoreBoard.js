@@ -37,7 +37,7 @@ export class ScoreBoard extends Element {
     }
 
     update(pirate, key) {
-        if(key.collected)
+        if(!key===null && key.collected)
             this.hasKey = true;
         this.nbLives = pirate.nbLives;
         this.nbCoins = pirate.nbCoins;

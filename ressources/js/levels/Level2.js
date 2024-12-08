@@ -1,7 +1,7 @@
 import { wallsLevel2, defaultWalls } from "../elements/Wall.js";
 import { Key } from "../elements/Key.js";
 import { Door } from "../elements/Door.js";
-import { Enemy } from "../characters/Ennemy.js";
+import { Enemy } from "../characters/Enemy.js";
 import { Level } from "./Level.js";
 
 /**
@@ -14,8 +14,8 @@ export class Level2 extends Level {
 
     super(ctx, game, selectedCharacter, 2,
         new Key(50, 400),
-        new Door(405, 305),
-        new Enemy(300, 200, 600, 200, 120, 0)
+        new Door(405, 305, 44, 44),
+        new Enemy(100, 100, 600, 600, 120, 0)
     );
 
     this.walls = [...defaultWalls, ...wallsLevel2];
