@@ -1,20 +1,18 @@
+import { Element } from "./Element.js";
+
 /**
- * This class represents a coin,
- * that the player should collect.
  * @author Matthias Gaillard
+ * @see Element
  */
-export class Coin {
+export class Coin extends Element {
 
     static WIDTH = 25;
     static HEIGHT = 25;
     constructor(x, y) {
 
-        this.x = x;
-        this.y = y;
-        this.collected=false;
+        super(x, y, 25, 25, true);
 
         this.WEIGHT = 15;
-
 
         this.SPRITE_QUANTITY = 6;
         this.sprite = [];

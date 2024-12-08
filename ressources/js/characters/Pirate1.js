@@ -22,7 +22,6 @@ export class Pirate1 extends Pirate {
 
         this.loadSprites();
     }
-    gainWeight(coin) {
-    }
+
 
 }

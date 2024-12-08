@@ -4,7 +4,6 @@
  * @author Elia Pfammatter
  * @contributor Matthias Gaillard
  */
-
 export class Button {
     constructor(ctx, text, x, y, action, width = 130, height = 30) {
         this.ctx = ctx;

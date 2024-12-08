@@ -1,4 +1,4 @@
-import { Coin } from "./Coin.js";
+import { Coin } from "../elements/Coin.js";
 
 /**
  * This class represents the playable character
@@ -49,6 +49,10 @@ export class Pirate {
     this.loadSprites();
 
     this.footstepSound = new Audio("ressources/audio/soundEffects/footsteps.wav");
+
+
+    this.nbCoins = 0;
+    this.nbLives = 3;
 
   }
 

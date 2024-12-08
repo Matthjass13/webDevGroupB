@@ -11,7 +11,7 @@ game.switchTo("Menu");
  */
 document.addEventListener("keydown", function (event) {
   // Vérifie si la touche pressée est la flèche du bas
-  if (event.key === "ArrowDown" || event.key === "ArrowUp") {
-    event.preventDefault(); // Empêche le comportement par défaut (défilement)
-  }
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+        event.preventDefault(); // Empêche le comportement par défaut (défilement)
+    }
 });

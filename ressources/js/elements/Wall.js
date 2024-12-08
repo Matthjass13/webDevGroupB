@@ -1,12 +1,12 @@
+import { Element } from "./Element.js";
+
 /**
  * @author Alexis Jordan
+ * @see Element
  */
-export class Wall {
+export class Wall extends Element {
   constructor(x, y, width, height) {
-    this.x = x; // X-coordinate of the wall's top-left corner
-    this.y = y; // Y-coordinate of the wall's top-left corner
-    this.width = width; // Width of the wall
-    this.height = height; // Height of the wall
+    super(x, y, width, height);
   }
 
   // Draw the wall on the canvas

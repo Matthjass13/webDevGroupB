@@ -1,17 +1,18 @@
+import { Element } from "./Element.js";
+
 /**
  * This class represents a door.
  * It can be open by a key.
+ * @see Element
  * @see Key
  * @author Matthias Gaillard
  */
 
-export class Door {
+export class Door extends Element {
     constructor(x, y) {
 
-        this.x = x;
-        this.y = y;
-        this.WIDTH = 39;
-        this.HEIGHT = 44;
+        super(x, y, 39, 44);
+
         this.state="closed";
         this.SPRITE_QUANTITY = 6;
         this.sprites = [];
@@ -31,7 +32,7 @@ export class Door {
 
     draw(ctx) {
         this.update();
-        ctx.drawImage(this.sprites[this.currentSpriteIndex], this.x, this.y, this.WIDTH, this.HEIGHT);
+        ctx.drawImage(this.sprites[this.currentSpriteIndex], this.x, this.y, this.width, this.height);
     }
     open() {
         this.state="opening";

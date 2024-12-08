@@ -1,10 +1,10 @@
-import { Pirate } from "./Pirate.js";
-import { ScoreBoard } from "./ScoreBoard.js";
-import { Coin } from "./Coin.js";
-import { wallsLevel1, defaultWalls } from "./wall.js";
-import { Key } from "./Key.js";
-import { Door } from "./Door.js";
-import { Enemy } from "./Ennemy.js";
+import { Pirate } from "../characters/Pirate.js";
+import { ScoreBoard } from "../elements/ScoreBoard.js";
+import { Coin } from "../elements/Coin.js";
+import { wallsLevel1, defaultWalls } from "../elements/Wall.js";
+import { Key } from "../elements/Key.js";
+import { Door } from "../elements/Door.js";
+import { Enemy } from "../characters/Ennemy.js";
 
 /**
  * This class is an abstract level.
@@ -34,7 +34,7 @@ export class Level {
         );
         this.keysDown = {};
 
-        this.scoreBoard = new ScoreBoard(0, 0);
+        this.scoreBoard = new ScoreBoard(0, 0, this.pirate);
 
         this.then = Date.now();
         this.setupKeyboardListeners();
@@ -51,10 +51,6 @@ export class Level {
                     ))
             );
 
-        // Define the walls for the level (using default and level-specific walls)
-        this.walls = [...defaultWalls, ...wallsLevel1];
-        this.DOOR_WALL_X = 340;
-        this.DOOR_WALL_Y = 110;
 
         this.soundTrack = new Audio("ressources/audio/soundTracks/caribbean.wav");
         this.soundTrack.volume = 0.1;
@@ -132,7 +128,7 @@ export class Level {
         );
 
         this.ennemy.update(modifier);
-        if (this.pirate.touch(this.enemy)) {
+        if (this.pirate.touch(this.ennemy)) {
             console.log("Collison with enemy");
             //this.handlePlayerHitEnemy();
         }
@@ -190,15 +186,17 @@ export class Level {
         for (let coin of this.coins) {
             if (this.pirate.touch(coin)) {
                 coin.collected = true;
-                ++this.scoreBoard.nbCoins;
+                ++this.pirate.nbCoins;
                 this.pirate.gainWeight(coin);
             }
         }
 
         const allCoinsCollected = this.coins.every((coin) => coin.collected);
         if (allCoinsCollected && this.key.collected) {
-            this.game.switchTo("Level" + this.number, this.number+1, this.selectedCharacter);
+            this.game.switchTo("Level", this.number+1, this.selectedCharacter);
         }
+
+        this.scoreBoard.update(this.pirate, this.key);
     }
 
     draw() {

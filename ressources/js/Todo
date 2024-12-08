@@ -2,9 +2,13 @@ Alexis
 - JSON (Optional, game setup and JS website) for registration and high score
 
 Matthias
-Door to add to level2, 3, 4
-Add key to scoreboard
+Door and ennemy to add to level2, 3, 4
 manage collision and lose lives system
-
+Change number of coins according to level
+win screen
+tester le reset de level
+Check sounds
+pas dessiner les murs
+Réviser Door et Coin en tant qu'animatedElements
 
 Integrates a tutorial video
