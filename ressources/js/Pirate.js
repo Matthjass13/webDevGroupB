@@ -181,6 +181,9 @@ export class Pirate {
     }
   }
 
+
+  /*Don't refactor
+  Otherwise coin hurtboxes glitch*/
   touch(coin) {
     return (
       !(
@@ -192,16 +195,6 @@ export class Pirate {
     );
   }
 
-  touchEnemy(enemy) {
-    return (
-        !(
-            this.x + this.RUNNING_SPRITE_WIDTH <= enemy.x ||
-            enemy.x + enemy.width <= this.x ||
-            this.y + this.RUNNING_SPRITE_HEIGHT <= enemy.y ||
-            enemy.y + enemy.height <= this.y
-        )
-    );
-  }
 
   touchElement(element) {
     return !(

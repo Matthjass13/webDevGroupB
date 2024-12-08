@@ -13,8 +13,8 @@ export class Enemy {
         this.y = startY;
         this.speed = speed;
         this.number = number;
-        this.width = 40;
-        this.height = 40;
+        this.width = 60;
+        this.height = 60;
 
         this.direction = 1; // 1 for right, -1 for left
         this.isRunning = true;
@@ -28,13 +28,10 @@ export class Enemy {
 
         this.SPRITES_FOLDER_PATH = "ressources/images/game/level/characters/enemy/" + number + "/";
 
-        this.IDLE_SPRITE_INTERVAL = 20;
-        this.IDLE_SPRITE_QUANTITY = 2;
-
         this.runningSpriteIndex = 0;
         this.runningSpriteTimer = 0;
-        this.RUNNING_SPRITE_INTERVAL = 10;
-        this.RUNNING_SPRITE_QUANTITY = 4;
+        this.RUNNING_SPRITE_INTERVAL = 5;
+        this.RUNNING_SPRITE_QUANTITY = 16;
 
         this.currentSprite = null;
 
@@ -47,6 +44,7 @@ export class Enemy {
 
         const onSpriteLoaded = () => {
             loadedCount++;
+            console.log(loadedCount);
             if (loadedCount === totalSprites) {
                 this.ready = true; // Set ready to true only when all sprites are loaded
                 console.log("Enemy sprites fully loaded");
@@ -72,14 +70,12 @@ export class Enemy {
             const moveX = this.direction * this.speed * modifier;
             this.x += moveX;
             this.currentDistance += Math.abs(moveX);
-            console.log("updating enemy")
 
             if (this.currentDistance >= this.totalDistance) {
                 this.x = this.endX;
                 this.reverseDirection();
                 this.currentDistance = 0;
             }
-            console.log("updating enemy")
             this.isRunning = true;
         } else {
             this.isRunning = false;
@@ -116,7 +112,6 @@ export class Enemy {
     }
 
     render(ctx) {
-        console.log(`Rendering enemy, ready: ${this.ready}`);
         if (this.ready) {
             if (this.direction === 1) {
                 if (this.isRunning) {
@@ -124,8 +119,8 @@ export class Enemy {
                         this.runningRightSprites[this.runningSpriteIndex],
                         this.x,
                         this.y,
-                        40,
-                        40
+                        this.width,
+                        this.height
                     );
                 }
             } else {
@@ -134,8 +129,8 @@ export class Enemy {
                         this.runningLeftSprites[this.runningSpriteIndex],
                         this.x,
                         this.y,
-                        40,
-                        40
+                        this.width,
+                        this.height
                     );
                 }
             }

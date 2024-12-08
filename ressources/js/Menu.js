@@ -1,5 +1,5 @@
 import { Button } from "./Button.js";
-import { Level } from "./Level.js";
+import { Level1 } from "./Level1.js";
 
 /**
  * This class displays the title screen of the game.
@@ -14,7 +14,7 @@ export class Menu {
   constructor(ctx, game) {
     this.ctx = ctx;
     this.game = game;
-    this.selectedCharacter = 0;
+    this.selectedCharacter = 1;
     this.characters = [];
     this.loadCharacterImages();
     this.time = new Date().toLocaleTimeString();
@@ -189,21 +189,26 @@ export class Menu {
   drawDescription() {
     this.drawBasis();
     this.drawCenteredText([
-      "In this web-based game you are a pirate trapped in a series of mazes.",
-      "Your goal is to find the key hidden within each maze and use it to unlock the treasure chest which leads into the next level.",
-      "Along the way through the maze, you must avoid enemies, which can send you back to the start of the maze.",
-      "With each level the enemies become more dangerous, and the maze becomes more complex.",
+      "Live the adventure of a fierce pirate !",
+      "Your boat sank and you were stranded on a desert island...",
+      "Avoid unfriendly foes and find keys to progress.",
+      "Collect all coins to get through all the levels and free yourself !",
     ]);
   }
+
   drawCenteredText(textArray) {
     this.ctx.fillStyle = "#000000";
     this.ctx.font = "20px 'Press Start 2P'";
     this.ctx.textAlign = "center";
     this.ctx.textBaseline = "top";
 
-    let textY = 100;
     const lineHeight = 25;
     const maxWidth = this.ctx.canvas.width - 40;
+
+    let linesToDraw = [];
+    let totalHeight = 0;
+    const textYStart = 100;
+
 
     textArray.forEach((line) => {
       if (this.ctx.measureText(line).width > maxWidth) {
@@ -213,21 +218,41 @@ export class Menu {
           const testLine = currentLine + word + " ";
           const testWidth = this.ctx.measureText(testLine).width;
           if (testWidth > maxWidth) {
-            this.ctx.fillText(currentLine, this.ctx.canvas.width / 2, textY);
+            linesToDraw.push(currentLine.trim());
             currentLine = word + " ";
-            textY += lineHeight;
           } else {
             currentLine = testLine;
           }
         });
-        this.ctx.fillText(currentLine, this.ctx.canvas.width / 2, textY);
-        textY += lineHeight;
+        linesToDraw.push(currentLine.trim());
       } else {
-        this.ctx.fillText(line, this.ctx.canvas.width / 2, textY);
-        textY += lineHeight;
+        linesToDraw.push(line);
       }
     });
+
+    totalHeight = linesToDraw.length * lineHeight;
+
+    const rectangleX = 120;
+    const rectangleY = textYStart - 10;
+    const rectangleWidth = this.ctx.canvas.width - 240;
+    const rectangleHeight = totalHeight + 20;
+
+    this.ctx.fillStyle = "#FBD705";
+    this.ctx.fillRect(rectangleX, rectangleY, rectangleWidth, rectangleHeight);
+
+    this.ctx.strokeStyle = "#000000";
+    this.ctx.lineWidth = 2;
+    this.ctx.strokeRect(rectangleX, rectangleY, rectangleWidth, rectangleHeight);
+
+    let textY = textYStart;
+    this.ctx.fillStyle = "#000000";
+
+    linesToDraw.forEach((line) => {
+      this.ctx.fillText(line, this.ctx.canvas.width / 2, textY);
+      textY += lineHeight;
+    });
   }
+
 
   selectCharacter() {
     // Clear the canvas and draw the background

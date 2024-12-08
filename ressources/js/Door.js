@@ -10,8 +10,8 @@ export class Door {
 
         this.x = x;
         this.y = y;
-        this.WIDTH = 78;
-        this.HEIGHT = 96;
+        this.WIDTH = 39;
+        this.HEIGHT = 44;
         this.state="closed";
         this.SPRITE_QUANTITY = 6;
         this.sprites = [];

@@ -12,12 +12,14 @@ export class Key {
     this.width = 20; // Largeur de la clé
     this.height = 20; // Hauteur de la clé
     this.collected = false;
+
+    this.keyImage = new Image();
+    this.keyImage.src = "ressources/images/game/level/elements/key.png";
   }
 
   draw(ctx) {
-    if (!this.collected) {
-      ctx.fillStyle = "#FFD700"; // Couleur or pour la clé
-      ctx.fillRect(this.x, this.y, this.width, this.height);
-    }
+    if (!this.collected)
+      ctx.drawImage(this.keyImage, this.x, this.y, this.width, this.height);
   }
+
 }

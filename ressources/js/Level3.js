@@ -1,4 +1,4 @@
-// Implementation of Level 3
+// Implementation of Level1 3
 import { Pirate } from "./Pirate.js";
 import { ScoreBoard } from "./ScoreBoard.js";
 import { Coin } from "./Coin.js";
@@ -11,7 +11,7 @@ import { Key } from "./Key.js";
  */
 export class Level3 {
   constructor(ctx, game, selectedCharacter) {
-    console.log("Initializing Level 3");
+    console.log("Initializing Level1 3");
     this.ctx = ctx; // Reference to the canvas context
     this.game = game; // Reference to the game instance
     this.paused = false; // Boolean to track if the game is paused
