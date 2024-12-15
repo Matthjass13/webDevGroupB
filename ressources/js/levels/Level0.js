@@ -2,9 +2,12 @@ import { Level } from "./Level.js";
 import {Key} from "../elements/Key.js";
 import {Door} from "../elements/Door.js";
 import {Enemy} from "../characters/Enemy.js";
+import {Pirate} from "../characters/Pirate.js";
 
 /**
  * This class displays the level 0.
+ * It is a simple tutorial on how to move around
+ * and collect pieces.
  * @author Matthias Gaillard
  * @see Level
  */
@@ -15,14 +18,21 @@ export class Level0 extends Level {
 
 		this.walls=null;
 
-		this.pirate.x = this.WIDTH - 100;
-		this.pirate.y = this.HEIGHT - 100;
+		this.pirate.x=this.WIDTH/2;
+		this.pirate.y=this.HEIGHT/2;
+
 
 	}
 
 	update(modifier) {
 		this.updatePirate(modifier);
 		this.updateScoreBoard();
+	}
+
+	reset() {
+		super.reset();
+		this.pirate.x=this.WIDTH/2;
+		this.pirate.y=this.HEIGHT/2;
 	}
 
 	draw() {

@@ -1,18 +1,19 @@
 import { Coin } from "../elements/Coin.js";
+import { Element } from "../elements/Element.js";
 
 /**
- * This class represents the playable character
+ * This class represents a playable character
  * @author Matthias Gaillard
  * @contributor Alexis Jordan
  * @contributor Elia Pfammatter
  */
-export class Pirate {
-  constructor(x, y, number = 0) {
+
+export class Pirate extends Element {
+  constructor(x, y, number = 0, nbPieces = 0) {
+    super(x, y);
     this.number = number;
     this.BASE_X = x;
     this.BASE_Y = y;
-    this.x = x;
-    this.y = y;
     this.previousX = x;
     this.previousY = y;
     this.direction = 1; // Right (-1 for left)
@@ -86,7 +87,7 @@ export class Pirate {
   }
 
   updatePosition(modifier, keysDown) {
-    // Sauvegarder la position précédente
+
     this.previousX = this.x;
     this.previousY = this.y;
 
@@ -185,9 +186,8 @@ export class Pirate {
     }
   }
 
-
   /*Don't refactor
-  Otherwise coin hurtboxes glitch*/
+  Otherwise coin hitboxes glitch*/
   touch(coin) {
     return (
       !(
@@ -198,8 +198,6 @@ export class Pirate {
       ) && !coin.collected
     );
   }
-
-
   touchElement(element) {
     return !(
       this.x + this.RUNNING_SPRITE_WIDTH <= element.x ||
@@ -208,17 +206,31 @@ export class Pirate {
       element.y + element.height <= this.y
     );
   }
+  isNextTo(door) {
+    let distance = Math.sqrt(Math.pow(this.x - door.x, 2) + Math.pow(this.y - door.y, 2));
+    return distance<=50;
+  }
 
-  /**
-   * Resets the position and speed.
-   */
-  reset() {
+
+  resetPosition() {
     this.x = this.BASE_X;
     this.y = this.BASE_Y;
+  }
+  reset() {
+    this.resetPosition();
     this.speed = this.BASE_SPEED;
+    this.nbCoins = 0;
+    this.nbLives = 3;
   }
 
+  /**
+   * This function slows down the second playable pirate
+   * each time he collects a coin.
+   * @param coin
+   */
   gainWeight(coin) {
-    if (this.number != 0) this.speed -= coin.WEIGHT;
+    if (this.number != 0)
+      this.speed -= coin.WEIGHT;
   }
+
 }

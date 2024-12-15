@@ -7,7 +7,8 @@ const game = new Game(ctx);
 game.switchTo("Menu");
 
 /**
- * Thanks to the following code, the page won't scroll when the player move his character
+ * Thanks to the following code,
+ * the page won't scroll when the player move his character down or up
  */
 document.addEventListener("keydown", function (event) {
   // Vérifie si la touche pressée est la flèche du bas

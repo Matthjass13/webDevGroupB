@@ -2,13 +2,11 @@ import { Pirate } from "../characters/Pirate.js";
 import { ScoreBoard } from "../elements/ScoreBoard.js";
 import { Coin } from "../elements/Coin.js";
 import { wallsLevel1, defaultWalls } from "../elements/Wall.js";
-import { Key } from "../elements/Key.js";
-import { Door } from "../elements/Door.js";
-import { Enemy } from "../characters/Enemy.js";
 
 /**
  * This class is an abstract level.
  * Subclasses will create concrete levels.
+ *
  * @author Matthias Gaillard
  */
 export class Level {
@@ -16,8 +14,8 @@ export class Level {
     constructor(ctx, game, selectedCharacter, number, key=null, door=null, enemy=null) {
         this.ctx = ctx;
         this.game = game;
+        this.number = number;
         this.selectedCharacter = selectedCharacter;
-        this.number=number;
         this.key=key;
         this.door=door;
         this.enemy=enemy;
@@ -28,11 +26,7 @@ export class Level {
         this.bgImage = new Image();
         this.bgImage.src = "ressources/images/game/level/background/level" + number + ".png";
 
-        this.pirate = new Pirate(
-            this.ctx.canvas.width / 2,
-            this.ctx.canvas.height / 2,
-            this.selectedCharacter
-        );
+        this.pirate = new Pirate(this.WIDTH-100, this.HEIGHT-100, selectedCharacter);
         this.keysDown = {};
 
         this.scoreBoard = new ScoreBoard(0, 0, this.pirate);
@@ -52,6 +46,7 @@ export class Level {
                     ))
             );
 
+        this.isGameFinished = false;
 
         this.soundTrack = new Audio("ressources/audio/soundTracks/caribbean.wav");
         this.soundTrack.volume = 0.1;
@@ -68,7 +63,6 @@ export class Level {
         this.clear();
     }
 
-    // Set up listeners for keyboard events
     setupKeyboardListeners() {
         addEventListener(
             "keydown",
@@ -98,26 +92,12 @@ export class Level {
         );
     }
 
-    handlePlayerHitEnemy() {
-        this.scoreBoard.lives -= 1;
-        // Check if game over
-        if (this.scoreBoard.lives <= 0) {
-            console.log("Game Over!");
-        } else {
-            console.log("Player hit!");
-        }
-    }
 
     update(modifier) {
-
         this.updatePirate(modifier);
-
         this.updateEnnemy(modifier);
-
         this.updateWalls();
-
         this.updateScoreBoard();
-
     }
 
     updatePirate(modifier) {
@@ -140,11 +120,16 @@ export class Level {
         );
     }
     updateEnnemy(modifier) {
-        this.enemy.update(modifier);
-        if (this.pirate.touch(this.enemy)) {
-            console.log("Collison with enemy");
-            //this.handlePlayerHitEnemy();
-        }
+
+            this.enemy.update(modifier);
+            if (this.pirate.touch(this.enemy)) {
+                this.enemy.hit(this.pirate);
+                if(this.pirate.nbLives===0) {
+                    this.endGame(false);
+                }
+            }
+
+
     }
     updateWalls() {
         for (let wall of this.walls) {
@@ -190,16 +175,26 @@ export class Level {
 
         if (!this.key.collected && this.pirate.touchElement(this.key)) {
             this.key.collected = true;
+            /*this.door.open();
+            this.walls = this.walls.filter(
+                (wall) => !(wall.x === this.DOOR_WALL_X && wall.y ===  this.DOOR_WALL_Y)
+            );*/
+        }
+
+        if (this.key.collected && this.pirate.isNextTo(this.door)) {
             this.door.open();
             this.walls = this.walls.filter(
                 (wall) => !(wall.x === this.DOOR_WALL_X && wall.y ===  this.DOOR_WALL_Y)
             );
         }
+
+
     }
 
     updateScoreBoard() {
         for (let coin of this.coins) {
             if (this.pirate.touch(coin)) {
+                coin.playSound();
                 coin.collected = true;
                 ++this.pirate.nbCoins;
                 this.pirate.gainWeight(coin);
@@ -207,8 +202,8 @@ export class Level {
         }
         const allCoinsCollected = this.coins.every((coin) => coin.collected);
         if (allCoinsCollected && (this.key===null || this.key.collected)) {
-            console.log(allCoinsCollected + "allcoins");
             this.game.switchTo("Level", this.number+1, this.selectedCharacter);
+            this.pirate.footstepSound.pause();
         }
         this.scoreBoard.update(this.pirate, this.key);
     }
@@ -225,6 +220,10 @@ export class Level {
         this.key.draw(this.ctx);
         for (let wall of this.walls) {
             wall.draw(this.ctx);
+        }
+
+        if(this.isGameFinished) {
+            this.displayGameOverMessage();
         }
     }
 
@@ -258,12 +257,9 @@ export class Level {
             this.soundTrack.pause();
     }
 
-    // Reset the level to its initial state
     reset() {
         this.soundTrack.currentTime = 0;
-        this.soundTrack.play();
         this.scoreBoard.reset(); // Reset the scoreboard
-        this.pirate.reset(); // Reset the pirate's position and state
         // Recreate coins and position them randomly
         this.coins
             .fill()
@@ -277,4 +273,37 @@ export class Level {
         this.key.collected = false; // Reset the key's state
         this.walls = [...defaultWalls, ...wallsLevel1]; // Reset the walls to default
     }
+
+    endGame(win) {
+        this.isGameFinished = true;
+        this.winstate = win;
+    }
+    displayGameOverMessage() {
+
+        this.togglePause();
+
+        let message;
+
+        if(this.winstate) {
+            message = "You win ! Press b to go back to menu.";
+            this.ctx.fillStyle = "blue";
+        }
+        else {
+            message = "You lose! Press b to go back to menu.";
+            this.ctx.fillStyle = "red";
+        }
+        this.ctx.fillRect(50, 200, this.WIDTH-100, this.HEIGHT-400);
+        this.ctx.strokeStyle = "#000000";
+        this.ctx.lineWidth = 2;
+        this.ctx.strokeRect(50, 200, this.WIDTH-100, this.HEIGHT-400);
+
+        this.ctx.font = "bold 24px Arial";
+        this.ctx.fillStyle = "black";
+        this.ctx.textAlign = "center";
+        this.ctx.textBaseline = "middle";
+
+        this.ctx.fillText(message, this.WIDTH / 2, this.HEIGHT / 2);
+    }
+
+
 }

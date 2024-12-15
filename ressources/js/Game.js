@@ -4,13 +4,12 @@ import { Level0 } from "./levels/Level0.js";
 import { Level1 } from "./levels/Level1.js";
 import { Level2 } from "./levels/Level2.js";
 import { Level3 } from "./levels/Level3.js";
-import { Level4 } from "./levels/Level4.js";
 
 /**
  * This class contains the whole game
- * and is used to switch between menu and level screen
+ * and is used to switch between menu and level screens
  * @see Menu
- * @see Level1
+ * @see Level
  * @author Matthias Gaillard
  * @contributor Alexis Jordan
  */
@@ -18,8 +17,7 @@ export class Game {
   constructor(ctx) {
     this.ctx = ctx;
     this.currentScene = null;
-    this.menu = new Level0(this.ctx, this, 1);
-    //this.menu = new Menu(ctx, this);
+    this.menu = new Menu(ctx, this);
   }
 
   switchTo(sceneType, levelNumber = 1, selectedCharacter= 1) {
@@ -43,7 +41,6 @@ export class Game {
             this.currentScene = new Level3(this.ctx, this, selectedCharacter);
             break;
           case 4:
-            this.currentScene = new Level4(this.ctx, this, selectedCharacter);
             break;
         }
       }

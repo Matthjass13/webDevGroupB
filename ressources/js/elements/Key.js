@@ -11,7 +11,6 @@ import { Element } from "./Element.js";
 export class Key extends Element {
     constructor(x, y, width= 20, height = 20) {
         super(x, y, width, height, true);
-
         this.image = new Image();
         this.image.src = "ressources/images/game/level/elements/key.png";
     }
@@ -22,4 +21,3 @@ export class Key extends Element {
     }
 
 }
-

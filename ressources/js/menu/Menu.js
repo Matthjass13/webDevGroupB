@@ -3,7 +3,7 @@ import { Button } from "./Button.js";
 /**
  * This class displays the title screen of the game.
  * From there, we can access the game description and rules.
- * We can also launch a level, which is represented by its own class.
+ * We can also launch the first level, which is represented by its own class.
  * @see Button
  * @author Elia Pfammatter
  * @contributor Matthias Gaillard
@@ -11,6 +11,7 @@ import { Button } from "./Button.js";
  */
 export class Menu {
   constructor(ctx, game) {
+
     this.ctx = ctx;
     this.game = game;
     this.selectedCharacter = 1;
@@ -18,7 +19,6 @@ export class Menu {
     this.loadCharacterImages();
     this.time = new Date().toLocaleTimeString();
     this.location = "Fetching location...";
-
 
     this.backgroundImage = new Image();
     this.backgroundImage.src =
@@ -43,7 +43,8 @@ export class Menu {
         "Start Game",
         ctx.canvas.width / 2 - 65,
         350,
-        () => this.game.switchTo("Level", 1, this.selectedCharacter)
+
+        () => this.startGame()
     );
     this.descriptionButton = new Button(
         this.ctx,
@@ -84,6 +85,16 @@ export class Menu {
       console.warn("Geolocation is not supported by this browser.");
       this.location = "Geolocation not supported";
     }
+
+    this.soundTrack = new Audio("ressources/audio/soundTracks/caribbean.wav");
+    this.soundTrack.volume = 0.1;
+    this.soundTrack.play();
+
+  }
+
+  startGame() {
+    this.game.currentScene.soundTrack.pause();
+    this.game.switchTo("Level", 0, this.selectedCharacter);
   }
 
   start() {

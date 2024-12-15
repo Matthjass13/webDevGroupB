@@ -1,20 +1,20 @@
+import { Element } from "../elements/Element.js";
+
 /**
  * This class represents an enemy
  * @author Elia Pfammatter
  */
 
-export class Enemy {
-    constructor(startX, startY, endX, endY, speed, number) {
+export class Enemy extends Element {
+    constructor(startX, startY, endX, endY, speedX, speedY, number) {
+        super(startX, startY, 60, 60);
         this.startX = startX;
         this.startY = startY;
         this.endX = endX;
         this.endY = endY;
-        this.x = startX;
-        this.y = startY;
-        this.speed = speed;
+        this.speedX = speedX;
+        this.speedY = speedY;
         this.number = number;
-        this.width = 60;
-        this.height = 60;
 
         this.direction = 1; // 1 for right, -1 for left
         this.isRunning = true;
@@ -62,13 +62,13 @@ export class Enemy {
         }
     }
 
-
     update(modifier) {
         if (this.currentDistance < this.totalDistance) {
-            const moveX = this.direction * this.speed * modifier;
+            const moveX = this.direction * this.speedX * modifier;
+            const moveY = this.direction * this.speedY * modifier;
             this.x += moveX;
+            this.y += moveY;
             this.currentDistance += Math.abs(moveX);
-
             if (this.currentDistance >= this.totalDistance) {
                 this.x = this.endX;
                 this.reverseDirection();
@@ -78,20 +78,8 @@ export class Enemy {
         } else {
             this.isRunning = false;
         }
-
         this.updateSprite();
     }
-
-    handlePlayerHitEnemy() {
-        this.scoreBoard.lives -= 1;
-        if (this.scoreBoard.lives <= 0) {
-            console.log("Game Over!");
-        } else {
-            console.log("Player hit!");
-            this.pirate.reset(); // Reset the pirate's position
-        }
-    }
-
 
     updateSprite() {
         if (this.isRunning) {
@@ -135,10 +123,9 @@ export class Enemy {
         }
     }
 
-    reset() {
-        this.x = this.startX;
-        this.y = this.startY;
-        this.currentDistance = 0;
+    hit(pirate) {
+        --pirate.nbLives;
+        pirate.resetPosition();
     }
 
 }

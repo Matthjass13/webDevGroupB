@@ -1,15 +1,1 @@
-Alexis
-- JSON (Optional, game setup and JS website) for registration and high score
-
-Matthias
-manage collision and lose lives system
-win screen
-tester le reset de level
-Check sounds
-Réviser Door et Coin en tant qu'animatedElements
-Révision des différents levels (player and ennemy positions...)
-Refactoring des personnages
-Check Ennemy class
-Keep the same scoreBoard between levels (nbCoins and nbLives)
-
-Integrates a tutorial video
+Integrate Game in react using IFrame or host it elsewhere

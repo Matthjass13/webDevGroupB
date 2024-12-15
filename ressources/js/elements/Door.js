@@ -2,18 +2,17 @@ import { Element } from "./Element.js";
 
 /**
  * This class represents a door.
- * It can be open by a key.
+ * It can be opened by a key.
  * @see Element
  * @see Key
  * @author Matthias Gaillard
  */
-
 export class Door extends Element {
     constructor(x, y, width= 39, height = 44) {
 
         super(x, y, width, height);
 
-        this.state="closed";
+        this.state = "closed";
         this.SPRITE_QUANTITY = 6;
         this.sprites = [];
 
@@ -28,6 +27,8 @@ export class Door extends Element {
         this.SPRITE_INTERVALLE = 5;
         this.spriteTimer = 0;
 
+        this.soundEffect = new Audio("ressources/audio/soundEffects/doorOpened.wav");
+
     }
 
     draw(ctx) {
@@ -35,7 +36,10 @@ export class Door extends Element {
         ctx.drawImage(this.sprites[this.currentSpriteIndex], this.x, this.y, this.width, this.height);
     }
     open() {
-        this.state="opening";
+        if(this.state==="closed") {
+            this.state="opening";
+            this.playSound();
+        }
     }
     update() {
         if(this.state === "opening") {

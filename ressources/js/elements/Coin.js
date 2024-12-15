@@ -1,6 +1,8 @@
 import { Element } from "./Element.js";
 
 /**
+ * This class represent the coins the player
+ * has to collect to finish the game.
  * @author Matthias Gaillard
  * @see Element
  */
@@ -28,10 +30,12 @@ export class Coin extends Element {
         this.SPRITE_INTERVALLE = 5;
         this.spriteTimer = 0;
 
-        this.sound = new Audio("ressources/audio/soundEffects/coinCollected.wav");
-        this.sound.volume=0.2;
+        this.soundEffect = new Audio("ressources/audio/soundEffects/coinCollected.wav");
+        this.soundEffect.volume = 0.05;
+
 
     }
+
     draw(ctx) {
         if(!this.collected) {
             this.updateSprite();
@@ -45,5 +49,6 @@ export class Coin extends Element {
             this.currentSpriteIndex = (this.currentSpriteIndex + 1) % this.SPRITE_QUANTITY;
         }
     }
+
     
 }

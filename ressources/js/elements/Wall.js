@@ -1,6 +1,8 @@
 import { Element } from "./Element.js";
 
 /**
+ * This class represent an invisble wall,
+ * in which the player cannot go through.
  * @author Alexis Jordan
  * @see Element
  */
