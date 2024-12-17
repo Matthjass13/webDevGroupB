@@ -30,7 +30,8 @@ export class Coin extends Element {
         this.SPRITE_INTERVALLE = 5;
         this.spriteTimer = 0;
 
-        this.soundEffect = new Audio("ressources/audio/soundEffects/coinCollected.wav");
+        this.soundEffect = new Audio(
+            "ressources/audio/soundEffects/coinCollected.wav");
         this.soundEffect.volume = 0.05;
 
 

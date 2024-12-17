@@ -7,7 +7,6 @@ import { Element } from "../elements/Element.js";
  * @contributor Alexis Jordan
  * @contributor Elia Pfammatter
  */
-
 export class Pirate extends Element {
   constructor(x, y, number = 0, nbPieces = 0) {
     super(x, y);
@@ -38,10 +37,10 @@ export class Pirate extends Element {
     this.runningSpriteTimer = 0;
     this.RUNNING_SPRITE_INTERVALLE = this.number === 0 ? 10 : 2;
     this.RUNNING_SPRITE_WIDTH = Math.floor(
-      (this.number === 0 ? 70 : 58) * 0.72
+      (this.number === 0 ? 65 : 58) * 0.72
     );
     this.RUNNING_SPRITE_HEIGHT = Math.floor(
-      (this.number === 0 ? 76 : 58) * 0.72
+      (this.number === 0 ? 65 : 58) * 0.72
     );
     this.RUNNING_SPRITE_QUANTITY = this.number === 0 ? 4 : 14;
 
@@ -49,7 +48,8 @@ export class Pirate extends Element {
 
     this.loadSprites();
 
-    this.footstepSound = new Audio("ressources/audio/soundEffects/footsteps.wav");
+    this.footstepSound = new Audio(
+        "ressources/audio/soundEffects/footsteps.wav");
 
 
     this.nbCoins = 0;
@@ -207,7 +207,8 @@ export class Pirate extends Element {
     );
   }
   isNextTo(door) {
-    let distance = Math.sqrt(Math.pow(this.x - door.x, 2) + Math.pow(this.y - door.y, 2));
+    let distance = Math.sqrt(Math.pow(this.x - door.x, 2)
+                                      + Math.pow(this.y - door.y, 2));
     return distance<=50;
   }
 

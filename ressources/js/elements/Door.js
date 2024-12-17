@@ -27,7 +27,8 @@ export class Door extends Element {
         this.SPRITE_INTERVALLE = 5;
         this.spriteTimer = 0;
 
-        this.soundEffect = new Audio("ressources/audio/soundEffects/doorOpened.wav");
+        this.soundEffect = new Audio(
+            "ressources/audio/soundEffects/doorOpened.wav");
 
     }
 

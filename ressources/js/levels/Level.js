@@ -104,15 +104,20 @@ export class Level {
         this.pirate.previousX = this.pirate.x;
         this.pirate.previousY = this.pirate.y;
         this.pirate.update(modifier, this.keysDown);
+
+        //Prevent pirate leaving the level from the left
         this.pirate.x = Math.max(
             0,
+            //Prevent pirate leaving the level from the right
             Math.min(
                 this.pirate.x,
                 this.ctx.canvas.width - this.pirate.RUNNING_SPRITE_WIDTH
             )
         );
+        //Prevent pirate leaving the level from the up
         this.pirate.y = Math.max(
             0,
+            //Prevent pirate leaving the level from the down
             Math.min(
                 this.pirate.y,
                 this.ctx.canvas.height - this.pirate.RUNNING_SPRITE_HEIGHT

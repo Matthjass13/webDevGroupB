@@ -35,6 +35,10 @@ export class Enemy extends Element {
 
         this.currentSprite = null;
 
+
+        this.ouch = new Audio(
+            "ressources/audio/soundEffects/ouch.wav");
+
         this.loadSprites();
     }
 
@@ -125,6 +129,7 @@ export class Enemy extends Element {
 
     hit(pirate) {
         --pirate.nbLives;
+        this.ouch.play();
         pirate.resetPosition();
     }
 
