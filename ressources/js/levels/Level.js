@@ -290,6 +290,13 @@ export class Level {
         let message;
 
         if(this.winstate) {
+            this.ctx.drawImage(
+                this.endImage,
+                0,
+                0,
+                this.ctx.canvas.width,
+                this.ctx.canvas.height
+            );
             message = "You win ! Press b to go back to menu.";
             this.ctx.fillStyle = "blue";
         }

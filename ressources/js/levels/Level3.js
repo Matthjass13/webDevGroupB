@@ -24,6 +24,9 @@ export class Level3 extends Level {
     this.DOOR_WALL_X = 195;
     this.DOOR_WALL_Y = 85;
 
+    this.endImage = new Image();
+    this.endImage.src = "ressources/images/game/level/end.png";
+
   }
   reset() {
     super.reset();
