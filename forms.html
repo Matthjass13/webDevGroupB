@@ -1,239 +1,223 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>64-31 - Projet - Inscription</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="ressources/css/style.css" />
-  <link rel="stylesheet" href="ressources/css/mobileStyle.css" />
-  <style>
-    #registration {
-      max-width: 500px;
-      margin: 50px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    .form-group {
-      margin-bottom: 20px;
-    }
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-    input[type="text"],
-    input[type="password"],
-    input[type="email"] {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    #drop-area {
-      border: 2px dashed #ccc;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    #drop-area.dragging {
-      background-color: #f0f0f0;
-    }
-    button[type="submit"],
-    button[type="button"] {
-      width: 100%;
-      padding: 10px;
-      background-color: #333;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-      margin-top: 10px;
-    }
-    a.disabled {
-      pointer-events: none;
-      color: gray;
-    }
-  </style>
-</head>
-<body>
-<header>
-  <h1>HES-SO Vs - 64-31 - Web Development</h1>
-  <nav>
-    <!-- Hamburger -->
-    <ul>
-      <li class="hamburger">
-        <img src="ressources/images/hamburger_icon.svg" />
-      </li>
-      <li>
-        <a href="description.html">Description</a>
-      </li>
-      <li>
-        <a href="sketch.html">Sketch</a>
-      </li>
-      <li>
-        <a href="mockup.html">Mockup</a>
-      </li>
-      <li>
-        <a href="flow.html">Flow</a>
-      </li>
-      <li>
-        <a href="logbook.html">Logbook</a>
-      </li>
-      <li>
-        <a href="game.html" id="game-link" class="disabled">Game</a>
-      </li>
-      <li class="active">
-        <a href="forms.html">Forms</a>
-      </li>
-    </ul>
-  </nav>
-</header>
+  <head>
+    <title>64-31 - Projet - Inscription</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="ressources/css/style.css" />
+    <link rel="stylesheet" href="ressources/css/mobileStyle.css" />
+    <style>
+      #registration {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="password"],
+      input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      #drop-area {
+        border: 2px dashed #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      #drop-area.dragging {
+        background-color: #f0f0f0;
+      }
+      button[type="submit"],
+      button[type="button"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+      a.disabled {
+        pointer-events: none;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>HES-SO Vs - 64-31 - Web Development</h1>
+      <nav>
+        <!-- Hamburger -->
+        <ul>
+          <li class="hamburger">
+            <img src="ressources/images/hamburger_icon.svg" />
+          </li>
+          <li>
+            <a href="description.html">Description</a>
+          </li>
+          <li>
+            <a href="sketch.html">Sketch</a>
+          </li>
+          <li>
+            <a href="mockup.html">Mockup</a>
+          </li>
+          <li>
+            <a href="flow.html">Flow</a>
+          </li>
+          <li>
+            <a href="logbook.html">Logbook</a>
+          </li>
+          <li>
+            <a href="game.html" id="game-link" class="disabled">Game</a>
+          </li>
+          <li class="active">
+            <a href="forms.html">Forms</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-<main>
-  <!-- Start of registration form content -->
-  <section id="registration">
-    <article>
-      <header>
-        <h2>Inscription</h2>
-      </header>
-      <form id="registration-form">
-        <div class="form-group">
-          <label for="username">Nom :</label>
-          <input type="text" id="username" name="username" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Email :</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div class="form-group">
-          <label for="password">Mot de passe :</label>
-          <input type="password" id="password" name="password" required />
-        </div>
-        <div class="form-group">
-          <label for="profile-image">Image de profil :</label>
-          <div id="drop-area" class="drop-zone">
-            <p>
-              Glissez et déposez votre image ici ou cliquez pour
-              sélectionner un fichier
-            </p>
-            <input
-                    type="file"
-                    id="profile-image"
-                    name="profile-image"
-                    accept="image/*"
-                    style="display: none"
-            />
-          </div>
-        </div>
-        <div class="form-group">
-          <button type="submit">S'inscrire</button>
-        </div>
-      </form>
-    </article>
-  </section>
-  <!-- End of registration form content -->
-</main>
+    <main>
+      <!-- Start of registration form content -->
+      <section id="registration">
+        <article>
+          <header>
+            <h2>Inscription</h2>
+          </header>
+          <form id="registration-form">
+            <div class="form-group">
+              <label for="username">Nom :</label>
+              <input type="text" id="username" name="username" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email :</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="password">Mot de passe :</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div class="form-group">
+              <label for="profile-image">Image de profil :</label>
+              <div id="drop-area" class="drop-zone">
+                <p>
+                  Glissez et déposez votre image ici ou cliquez pour
+                  sélectionner un fichier
+                </p>
+                <input
+                  type="file"
+                  id="profile-image"
+                  name="profile-image"
+                  accept="image/*"
+                  style="display: none"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="submit">S'inscrire</button>
+            </div>
+          </form>
+        </article>
+      </section>
+      <!-- End of registration form content -->
+    </main>
 
-<footer>
-  <img id="logo" src="ressources/images/logo.png" />
-</footer>
+    <footer>
+      <img id="logo" src="ressources/images/logo.png" />
+    </footer>
 
-<script src="ressources/js/script.js"></script>
-<script>
-  // JavaScript for drag and drop functionality
-  const dropArea = document.getElementById("drop-area");
-  const fileInput = document.getElementById("profile-image");
+    <script src="ressources/js/script.js"></script>
+    <script>
+      // JavaScript for drag and drop functionality
+      const dropArea = document.getElementById("drop-area");
+      const fileInput = document.getElementById("profile-image");
 
-  dropArea.addEventListener("click", () => fileInput.click());
+      dropArea.addEventListener("click", () => fileInput.click());
 
-  dropArea.addEventListener("dragover", (e) => {
-    e.preventDefault();
-    dropArea.classList.add("dragging");
-  });
-
-  dropArea.addEventListener("dragleave", () => {
-    dropArea.classList.remove("dragging");
-  });
-
-  dropArea.addEventListener("drop", (e) => {
-    e.preventDefault();
-    dropArea.classList.remove("dragging");
-    fileInput.files = e.dataTransfer.files;
-
-    // Update the drop area with the file name
-    if (fileInput.files.length > 0) {
-      dropArea.querySelector(
-              "p"
-      ).textContent = `Fichier sélectionné : ${fileInput.files[0].name}`;
-    }
-  });
-
-  // Handle file selection via file input
-  fileInput.addEventListener("change", () => {
-    if (fileInput.files.length > 0) {
-      dropArea.querySelector(
-              "p"
-      ).textContent = `Fichier sélectionné : ${fileInput.files[0].name}`;
-    }
-  });
-
-  // JavaScript to handle form submission and send data to server
-  document
-          .getElementById("registration-form")
-          .addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            const formData = {
-              username: document.getElementById("username").value,
-              email: document.getElementById("email").value,
-              password: document.getElementById("password").value,
-            };
-
-            // Send the form data to the local server to update the JSON file
-            fetch("http://localhost:3001/update-json", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(formData),
-            })
-                    .then((response) => response.text())
-                    .then((data) => {
-                      console.log("Succès :", data);
-                      alert(
-                              "Inscription réussie. Vous pouvez maintenant accéder au jeu."
-                      );
-                      localStorage.setItem("isRegistered", true);
-                      document.getElementById("game-link").classList.remove("disabled");
-                      document
-                              .getElementById("game-link")
-                              .setAttribute("href", "game.html");
-                    })
-                    .catch((error) => {
-                      console.error("Erreur :", error);
-                    });
-          });
-
-  // Disable the game link if not registered
-  window.addEventListener("load", () => {
-    const isRegistered = localStorage.getItem("isRegistered");
-    const gameLink = document.getElementById("game-link");
-    if (!isRegistered) {
-      gameLink.classList.add("disabled");
-      gameLink.addEventListener("click", (e) => {
+      dropArea.addEventListener("dragover", (e) => {
         e.preventDefault();
-        alert("Vous devez vous inscrire pour accéder au jeu.");
+        dropArea.classList.add("dragging");
       });
-    } else {
-      gameLink.classList.remove("disabled");
-      gameLink.setAttribute("href", "game.html");
-    }
-  });
-</script>
-</body>
+
+      dropArea.addEventListener("dragleave", () =>
+        dropArea.classList.remove("dragging")
+      );
+
+      dropArea.addEventListener("drop", (e) => {
+        e.preventDefault();
+        dropArea.classList.remove("dragging");
+        fileInput.files = e.dataTransfer.files;
+      });
+
+      // JavaScript to handle form submission and create JSON file
+      document
+        .getElementById("registration-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const formData = {
+            username: document.getElementById("username").value,
+            email: document.getElementById("email").value,
+            password: document.getElementById("password").value,
+          };
+
+          // Convert the form data to JSON
+          const jsonData = JSON.stringify(formData);
+          console.log("Form data in JSON format:", jsonData);
+
+          // Create and download JSON file
+          const blob = new Blob([jsonData], { type: "application/json" });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "registrationData.json";
+          a.click();
+          URL.revokeObjectURL(url);
+
+          // Store data in localStorage to mark registration as complete
+          localStorage.setItem("isRegistered", true);
+          alert("Inscription réussie. Vous pouvez maintenant accéder au jeu.");
+
+          // Enable the game link after registration
+          document.getElementById("game-link").classList.remove("disabled");
+          document.getElementById("game-link").removeAttribute("href");
+          document
+            .getElementById("game-link")
+            .setAttribute("href", "game.html");
+        });
+
+      // Disable the game link if not registered
+      window.addEventListener("load", () => {
+        const isRegistered = localStorage.getItem("isRegistered");
+        const gameLink = document.getElementById("game-link");
+        if (!isRegistered) {
+          gameLink.classList.add("disabled");
+          gameLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            alert("Vous devez vous inscrire pour accéder au jeu.");
+          });
+        } else {
+          gameLink.classList.remove("disabled");
+          gameLink.setAttribute("href", "game.html");
+        }
+      });
+    </script>
+  </body>
 </html>
