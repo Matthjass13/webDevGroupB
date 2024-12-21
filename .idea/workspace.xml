@@ -4,302 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1226690f-e42b-4509-940c-d564306b135e" name="Changes" comment="Updated toDo list (25.11.2024)">
+    <list default="true" id="1226690f-e42b-4509-940c-d564306b135e" name="Changes" comment="Removed unnessecary files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/background/sand.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/26.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/27.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/28.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/29.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/31.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/35.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/36.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/1-Idle/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/10-Dead Hit/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/10-Dead Hit/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/10-Dead Hit/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/10-Dead Hit/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/10-Dead Hit/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/10-Dead Hit/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/11-Dead Ground/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/11-Dead Ground/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/11-Dead Ground/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/11-Dead Ground/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/6-Ground/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/6-Ground/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/6-Ground/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/7-Attack/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/7-Attack/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/7-Attack/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/7-Attack/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/7-Attack/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/7-Attack/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/7-Attack/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/7-Attack/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/7-Attack/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/7-Attack/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/7-Attack/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/8-Blow the wick/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/8-Blow the wick/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/8-Blow the wick/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/8-Blow the wick/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/8-Blow the wick/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/8-Blow the wick/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/8-Blow the wick/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/8-Blow the wick/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/8-Blow the wick/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/8-Blow the wick/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/8-Blow the wick/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/9-Hit/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/9-Hit/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/9-Hit/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/9-Hit/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/9-Hit/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/9-Hit/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/9-Hit/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/9-Hit/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/running/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/running/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/running/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/running/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/running/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/running/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/running/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/running/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/running/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/running/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/running/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/1/running/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/26.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/27.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/28.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/29.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/31.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/35.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/36.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/37.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/38.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/39.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/40.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/41.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/42.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/43.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/44.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/1-Idle/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/10-Dead Hit/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/10-Dead Hit/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/10-Dead Hit/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/10-Dead Hit/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/10-Dead Hit/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/10-Dead Hit/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/11-Dead Ground/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/11-Dead Ground/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/11-Dead Ground/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/11-Dead Ground/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/2-Run/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/2-Run/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/2-Run/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/2-Run/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/2-Run/13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/2-Run/14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/2-Run/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/2-Run/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/2-Run/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/2-Run/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/2-Run/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/2-Run/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/2-Run/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/2-Run/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/3-Jump Anticipation/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/4-Jump/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/4-Jump/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/4-Jump/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/4-Jump/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/5-Fall/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/5-Fall/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/6-Ground/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/6-Ground/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/6-Ground/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/7-Attack/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/7-Attack/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/7-Attack/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/7-Attack/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/7-Attack/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/7-Attack/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/7-Attack/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/7-Attack/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/7-Attack/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/7-Attack/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/7-Attack/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/8-Swalow (Bomb)/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/8-Swalow (Bomb)/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/8-Swalow (Bomb)/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/8-Swalow (Bomb)/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/8-Swalow (Bomb)/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/8-Swalow (Bomb)/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/8-Swalow (Bomb)/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/8-Swalow (Bomb)/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/8-Swalow (Bomb)/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/8-Swalow (Bomb)/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/9-Hit/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/9-Hit/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/9-Hit/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/9-Hit/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/9-Hit/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/9-Hit/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/enemy/2/9-Hit/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/deadGround/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/deadGround/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/deadGround/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/deadGround/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/deadHit/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/deadHit/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/deadHit/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/deadHit/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/deadHit/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/deadHit/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorIn/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorIn/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorIn/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorIn/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorIn/13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorIn/14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorIn/15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorIn/16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorIn/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorIn/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorIn/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorIn/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorIn/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorIn/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorIn/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorIn/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorOut/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorOut/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorOut/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorOut/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorOut/13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorOut/14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorOut/15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorOut/16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorOut/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorOut/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorOut/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorOut/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorOut/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorOut/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorOut/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/doorOut/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/ground/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/ground/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/ground/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/hit/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/hit/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/hit/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/hit/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/hit/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/hit/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/hit/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/characters/player/1/hit/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/barrel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/blueBottle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/bomb/bombOff/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/bomb/bombOn/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/bomb/bombOn/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/bomb/bombOn/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/bomb/bombOn/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/bomb/bombOn/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/bomb/bombOn/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/bomb/bombOn/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/bomb/bombOn/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/bomb/bombOn/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/bomb/bombOn/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/bomb/explosion/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/bomb/explosion/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/bomb/explosion/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/bomb/explosion/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/bomb/explosion/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/bomb/explosion/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/bomb/explosion/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/bomb/explosion/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/bomb/explosion/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/cannon/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/cannon/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/cannon/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/cannon/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/cannon/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/cannon/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/cannon/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/cannon/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/cannon/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/cannon/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/cannon/cannonBall.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/chair.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/greenBottle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/healthBar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/key.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/originals/scoreBoardBackground_original.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/redBottle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/skull.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/table.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/elements/windows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/images/game/level/scoreBoard/heart2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/js/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/Game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/js/characters/Enemy.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/characters/Enemy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/js/characters/Pirate.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/characters/Pirate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/js/elements/Coin.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/elements/Coin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/js/elements/Door.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/elements/Door.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/js/elements/Element.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/elements/Element.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/js/elements/ScoreBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/elements/ScoreBoard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/js/elements/Wall.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/elements/Wall.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/js/levels/Level.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/levels/Level.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/js/levels/Level0.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/levels/Level0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/js/levels/Level1.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/levels/Level1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/js/levels/Level3.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/levels/Level3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -425,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731944066854</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Removed unnessecary files">
+      <option name="closed" value="true" />
+      <created>1734774669311</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1734774669311</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +174,8 @@
     <MESSAGE value="The base game looks great ! A lot of functionalities are implemented like coins and 2nd character, but there is still a lot to do." />
     <MESSAGE value="First version of the game is finished." />
     <MESSAGE value="Updated toDo list (25.11.2024)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated toDo list (25.11.2024)" />
+    <MESSAGE value="Removed unnessecary files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed unnessecary files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

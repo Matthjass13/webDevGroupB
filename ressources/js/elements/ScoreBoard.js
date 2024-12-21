@@ -3,7 +3,7 @@ import { Element } from "./Element.js";
 /**
  * This class represents the information about the character :
  * money, number of lives...
- * it is displayed on the top of the level.
+ * it is displayed in the top left corner of the level.
  * @see Element
  * @see Level
  * @see Coin

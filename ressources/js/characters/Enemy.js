@@ -4,7 +4,6 @@ import { Element } from "../elements/Element.js";
  * This class represents an enemy
  * @author Elia Pfammatter
  */
-
 export class Enemy extends Element {
     constructor(startX, startY, endX, endY, speedX, speedY, number) {
         super(startX, startY, 60, 60);

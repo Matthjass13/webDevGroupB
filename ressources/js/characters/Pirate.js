@@ -28,9 +28,25 @@ export class Pirate extends Element {
     this.SPRITES_FOLDER_PATH =
       "ressources/images/game/level/characters/player/" + number + "/";
 
+    /**
+     * Index that indicates which sprite must be displayed
+     * @type {number}
+     */
     this.idleSpriteIndex = 0;
+    /**
+     * Timer to know when to change sprites
+     * @type {number}
+     */
     this.idleSpriteTimer = 0;
+    /**
+     * Time between each sprites
+     * @type {number}
+     */
     this.IDLE_SPRITE_INTERVALLE = this.number === 0 ? 20 : 3;
+    /**
+     * Number of sprites used in the animation
+     * @type {number}
+     */
     this.IDLE_SPRITE_QUANTITY = this.number === 0 ? 2 : 26;
 
     this.runningSpriteIndex = 0;

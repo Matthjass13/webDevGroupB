@@ -42,6 +42,11 @@ export class Door extends Element {
             this.playSound();
         }
     }
+
+    /**
+     * If the door is closed, displays a static closed door.
+     * If the door is being opened, displays an animation until the door is completely opened.
+     */
     update() {
         if(this.state === "opening") {
             this.spriteTimer = (this.spriteTimer + 1) % this.SPRITE_INTERVALLE;

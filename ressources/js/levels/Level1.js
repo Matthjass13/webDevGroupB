@@ -26,12 +26,18 @@ export class Level1 extends Level {
   }
 
   /**
-   * Don't erase this function please
+   * Overrides the updateEnemy method of the Level superclass,
+   * because there is no enemy.
    * @param modifier
    */
   updateEnnemy(modifier) {
   }
 
+  /**
+   * Overrides the draw method of the Level superclass,
+   * because we do not want to draw the enemy,
+   * because there is no enemy.
+   */
   draw() {
     this.ctx.drawImage(this.bgImage, 0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
     this.scoreBoard.draw(this.ctx);

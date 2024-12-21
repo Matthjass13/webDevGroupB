@@ -11,12 +11,16 @@ export class Wall extends Element {
     super(x, y, width, height);
   }
 
-  // Draw the wall on the canvas
+  /**
+   * Draw the wall on the canvas
+   * Only used for debugging
+   */
   draw(ctx) {
     /*
     ctx.fillStyle = "#654321"; // Brown color to represent the walls
     ctx.fillRect(this.x, this.y, this.width, this.height); // Draw a filled rectangle representing the wall
-  */}
+    */
+  }
 }
 
 // Default walls used in every level

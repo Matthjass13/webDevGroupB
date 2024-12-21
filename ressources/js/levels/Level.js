@@ -6,8 +6,8 @@ import { wallsLevel1, defaultWalls } from "../elements/Wall.js";
 /**
  * This class is an abstract level.
  * Subclasses will create concrete levels.
- *
  * @author Matthias Gaillard
+ * @contributor Alexis Jordan
  */
 export class Level {
 
@@ -63,6 +63,9 @@ export class Level {
         this.clear();
     }
 
+    /**
+     * Set up the actions done after pressing some keys.
+     */
     setupKeyboardListeners() {
         addEventListener(
             "keydown",
@@ -124,8 +127,8 @@ export class Level {
             )
         );
     }
-    updateEnnemy(modifier) {
 
+    updateEnnemy(modifier) {
             this.enemy.update(modifier);
             if (this.pirate.touch(this.enemy)) {
                 this.enemy.hit(this.pirate);
@@ -133,9 +136,8 @@ export class Level {
                     this.endGame(false);
                 }
             }
-
-
     }
+
     updateWalls() {
         for (let wall of this.walls) {
             if (this.pirate.touchElement(wall)) {
@@ -180,10 +182,6 @@ export class Level {
 
         if (!this.key.collected && this.pirate.touchElement(this.key)) {
             this.key.collected = true;
-            /*this.door.open();
-            this.walls = this.walls.filter(
-                (wall) => !(wall.x === this.DOOR_WALL_X && wall.y ===  this.DOOR_WALL_Y)
-            );*/
         }
 
         if (this.key.collected && this.pirate.isNextTo(this.door)) {
@@ -223,13 +221,10 @@ export class Level {
         this.enemy.render(this.ctx);
         this.pirate.render(this.ctx);
         this.key.draw(this.ctx);
-        for (let wall of this.walls) {
+        for (let wall of this.walls)
             wall.draw(this.ctx);
-        }
-
-        if(this.isGameFinished) {
+        if(this.isGameFinished)
             this.displayGameOverMessage();
-        }
     }
 
     play() {
@@ -246,12 +241,17 @@ export class Level {
         window.requestAnimationFrame(() => this.play()); // Request the next frame
     }
 
-    // Clear the canvas
+    /**
+     * Clear the canvas
+     */
+
     clear() {
         this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
     }
 
-    // Toggle the paused state of the game
+    /**
+     * Toggle the paused state of the game
+     */
     togglePause() {
         this.paused = !this.paused;
         if (!this.paused) {
@@ -279,10 +279,16 @@ export class Level {
         this.walls = [...defaultWalls, ...wallsLevel1]; // Reset the walls to default
     }
 
+    /**
+     * Ends the game. If win, the player wins.
+     * If not, he loses.
+     * @param win
+     */
     endGame(win) {
         this.isGameFinished = true;
         this.winstate = win;
     }
+
     displayGameOverMessage() {
 
         this.togglePause();

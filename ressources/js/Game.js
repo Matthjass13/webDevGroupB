@@ -48,10 +48,10 @@ export class Game {
 
     this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
 
-    if (this.currentScene && this.currentScene.start) {
+    if (this.currentScene && this.currentScene.start)
       this.currentScene.start();
-    }
 
-    }
+
+  }
 
 }

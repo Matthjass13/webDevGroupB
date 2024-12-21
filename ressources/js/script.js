@@ -11,8 +11,6 @@ game.switchTo("Menu");
  * the page won't scroll when the player move his character down or up
  */
 document.addEventListener("keydown", function (event) {
-  // Vérifie si la touche pressée est la flèche du bas
-    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
-        event.preventDefault(); // Empêche le comportement par défaut (défilement)
-    }
+    if (event.key === "ArrowDown" || event.key === "ArrowUp")
+        event.preventDefault();
 });

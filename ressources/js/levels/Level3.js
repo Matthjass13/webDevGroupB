@@ -34,6 +34,10 @@ export class Level3 extends Level {
     this.pirate.reset();
   }
 
+  /**
+   * When the player has collected the key and all coins, he wins.
+   * @param modifier
+   */
   update(modifier) {
     const allCoinsCollected = this.coins.every((coin) => coin.collected);
     if (allCoinsCollected && this.key.collected) {

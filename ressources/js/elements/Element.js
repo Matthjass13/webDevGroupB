@@ -22,9 +22,6 @@ export class Element {
     draw(ctx) {
         ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
     }
-    computeDistanceTo(element) {
-        return Math.sqrt(Math.pow(this.x - element.x, 2) + Math.pow(this.y - element.y, 2));
-    }
 
     playSound() {
         this.soundEffect.play();

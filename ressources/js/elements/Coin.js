@@ -8,6 +8,13 @@ import { Element } from "./Element.js";
  */
 export class Coin extends Element {
 
+    /**
+     * Here, we used static variables for the coin size.
+     * We want to display 10 of them randomly in each level.
+     * But we do not want them to appear outside the level.
+     * So we need to know their size before instantiating them.
+     * @type {number}
+     */
     static WIDTH = 25;
     static HEIGHT = 25;
     constructor(x, y) {
